@@ -158,6 +158,14 @@
                 console.log(quote.gsx$quote.$t)
                 document.querySelector(".quote").textContent = quote.gsx$quote.$t;
                 document.querySelector(".author").textContent = "- " + quote.gsx$author.$t;
+                document.querySelector(".quote").classList.add("fade");
+                document.querySelector(".author").classList.add("fade");
             }
         })
+        setTimeout(fadeUd, 8500);
+    }
+
+    function fadeUd() {
+        document.querySelector(".quote").classList.remove("fade");
+        document.querySelector(".author").classList.remove("fade");
     }

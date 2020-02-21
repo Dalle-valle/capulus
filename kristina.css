@@ -1,0 +1,9 @@
+.quote,
+.author {
+    opacity: 0;
+    transition: 1s;
+}
+
+.fade {
+    opacity: 1;
+}
