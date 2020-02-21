@@ -1,0 +1,593 @@
+/*########### GENERELT ############*/
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0;
+    /*    background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);*/
+
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    padding-top: 2vw;
+
+
+}
+
+p {
+    font-family: muli, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*########### BURGER MENU MOBILE ONLY ############*/
+
+
+
+#mylinks p {
+    color: white;
+    margin: 0;
+}
+
+
+header {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background-color: rgba(153, 208, 242, 0.97);
+    top: 0;
+
+}
+
+#burger_menu {
+    position: absolute;
+    top: 0;
+    left: 18.5rem;
+    font-size: 2.3rem;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    display: flex;
+    font-style: normal;
+    color: white;
+
+
+
+
+
+}
+
+.burger_kryds {
+    font-size: 1.7rem;
+    padding-right: 0.1rem;
+    transform: scale(1.4, 1);
+    margin-bottom: 0;
+    color: white;
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#mylinks {
+
+    display: none;
+    background-color: rgba(90, 108, 108, 0.54);
+    width: 50vw;
+    height: 100vh;
+    float: right;
+    justify-content: space-around;
+
+
+
+
+}
+
+#mylinks a {
+    text-transform: uppercase;
+    font-family: muli, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+    color: white;
+
+
+
+}
+
+#menu_burger_bar {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+
+
+
+
+
+}
+
+
+
+#menu_burger_bar a {
+    color: #F4D4A7;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+
+}
+
+#menu0 {
+    position: relative;
+    text-align: center;
+    top: 35vw;
+    left: -20vw;
+}
+
+
+#menu1 {
+    position: relative;
+    text-align: center;
+    top: 35vw;
+    left: 10vw;
+}
+
+#menu2 {
+    position: relative;
+    text-align: center;
+    top: 35vw;
+    left: 10vw;
+}
+
+#menu3 {
+    position: relative;
+    text-align: center;
+    top: 35vw;
+    left: 10vw;
+}
+
+.menu_wrapper {
+    display: flex;
+    float: right;
+    align-content: flex-end;
+
+
+}
+
+
+.coffee {
+    background-image: url(billeder/capulus_favicon.png);
+    background-size: 100%;
+    height: 50%;
+    width: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 60vh;
+    left: 25%;
+    border-radius: 10px;
+
+}
+
+
+
+
+#logo {
+    background-image: url(billeder/logo_capulus.svg);
+    height: 5vw;
+    width: 5vw;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#logo img {
+    padding: 0;
+}
+
+/*########### SPLASH ############*/
+
+
+#splash {
+
+    width: 100vw;
+    height: 100vh;
+    background-image: url(billeder/mobile_splash.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#splasherino {
+    height: 100vh;
+}
+
+.quotes {
+    position: absolute;
+    left: 7vw;
+    top: 30vw;
+    color: white;
+
+}
+
+.quotes p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 20px;
+}
+
+
+
+
+#splash h2 {
+    color: white;
+    padding: 1rem;
+}
+
+
+
+/*
+.crooked {
+    height: 100%;
+    width: 50vw;
+    border-bottom: 28rem solid white;
+    border-left: 100vw solid transparent;
+    background-color: none;
+    position: absolute;
+}
+*/
+
+/*########### Section - Template ############*/
+
+article {
+    /*    border: 1px solid #000;*/
+    height: auto;
+    padding: 8px;
+    background-color: #ede3d8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
+
+
+
+}
+
+#index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 100px;
+
+}
+
+article img:hover {
+    transform: scale(1.1);
+}
+
+/*########### Overblik ############*/
+/*########### ANIMATIONER ############*/
+
+
+.fadein {
+    animation-name: fadein;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+.fadeout {
+    animation-name: fade;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.fade1 {
+    animation-name: fade1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-delay: 0.4s;
+}
+
+.fade2 {
+    animation-name: fade2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-delay: 0.6s;
+}
+
+.fade3 {
+    animation-name: fade3;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-delay: 0.8s;
+}
+
+.blur {
+    animation-name: blur;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+.blurback {
+    animation-name: blurback;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.appear {
+    animation-name: appear;
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes appear {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+@keyframes blurback {
+    0% {
+        opacity: 0.1;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes blur {
+    0% {
+        opacity:
+            1
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        transform: translateX(100%);
+    }
+
+
+    100 {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fade1 {
+    0% {
+        opacity: 0
+    }
+
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade2 {
+    0% {
+        opacity: 0
+    }
+
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade3 {
+    0% {
+        opacity: 0
+    }
+
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        transform: translateX(0%);
+    }
+
+
+    100 {
+        transform: translateX(100%);
+    }
+}
+
+.hide {
+    opacity: 0;
+}
+
+/*########### MEDIAQUERY ############*/
+
+@media only screen and (min-width: 600px) {
+    #splash {
+        background-image: url(billeder/splash_desktop_placeholder.png);
+    }
+
+    #logo {
+        visibility: visible;
+    }
+
+    #mylinks {
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, 0);
+        width: 100%;
+        height: auto;
+        float: none;
+        justify-content: space-around;
+
+
+    }
+
+    #menu_burger_bar {
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        top: 0;
+        width: 100vw;
+        align-items: center;
+        background-color: white;
+
+
+
+
+    }
+
+    #menu_burger_bar a {
+        display: inline-block;
+
+
+        border-bottom-left-radius: 10%;
+        border-top-right-radius: 10%;
+    }
+
+    #menu_burger_bar a:hover {
+
+        transform: scale(1.2);
+
+
+
+    }
+
+    header p {
+        font-family: muli, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        padding-left: 8vw;
+
+
+    }
+
+    #burger_menu {
+        display: none;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+
+    }
+
+    .coffee {
+        display: none;
+    }
+
+    #menu0 {
+        position: relative;
+        text-align: center;
+        top: 0;
+        opacity: 1;
+    }
+
+
+    #menu1 {
+        position: relative;
+        text-align: center;
+        top: 0;
+        opacity: 1;
+
+
+
+    }
+
+    #menu2 {
+        position: relative;
+        text-align: center;
+        top: 0;
+        opacity: 1;
+
+
+    }
+
+    #menu3 {
+        position: relative;
+        text-align: center;
+        top: 0;
+        opacity: 1;
+
+
+    }
+
+    #menu0 p {
+        color: black;
+    }
+
+    #menu1 p {
+        color: black;
+    }
+
+    #menu2 p {
+        color: black;
+    }
+
+    #menu3 p {
+        color: black;
+    }
+
+    #splasherino {
+        height: 80vh;
+    }
+
+    #splash h2 {}
+
+    .quotes {
+
+        left: 0;
+        top: 22vh;
+        color: white;
+        padding: 5vw;
+
+    }
+
+    .quotes h2 {
+        font-size: 2.5rem;
+        max-width: 40ch;
+    }
+
+    .quotes p {
+        font-size: 1.5rem;
+    }
+}
