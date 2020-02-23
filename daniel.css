@@ -47,6 +47,7 @@ header {
     width: 100%;
     background-color: rgba(153, 208, 242, 0.97);
     top: 0;
+    z-index: 1000;
 
 }
 
