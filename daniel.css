@@ -262,6 +262,8 @@ article img:hover {
     height: 7vh;
     width: 5rem;
     padding: 10px;
+    background-color: #ede3d8;
+    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -307,6 +309,7 @@ article img:hover {
 #detail button {
     margin: .5em;
     background-color: rgba(240, 248, 255, 0);
+
 }
 
 #detail img {
@@ -318,6 +321,10 @@ article img:hover {
 .skjul {
     display: none;
 
+}
+
+#index h2 {
+    text-transform: capitalize;
 }
 
 /*########### ANIMATIONER ############*/
