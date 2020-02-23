@@ -242,11 +242,84 @@ article {
 
 }
 
+/*
 article img:hover {
     transform: scale(1.1);
-}
+}*/
 
 /*########### Overblik ############*/
+#filter_menu_links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#filter_menu h2 {
+    text-align: center;
+}
+
+.filter {
+    height: 7vh;
+    width: 5rem;
+    padding: 10px;
+
+}
+
+.wrappy1 {
+    flex-grow: 1;
+    height: 5vw;
+    width: 7vw;
+}
+
+.wrappy2 {
+    flex-grow: 1;
+    height: 5vw;
+    width: 7vw;
+}
+
+#detail {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: scroll;
+
+
+
+}
+
+.valgt {
+    background-color: #6c8181;
+}
+
+#detail .ret {
+
+    margin: 4rem auto;
+    padding: 4rem;
+    min-height: 50vh;
+    /*    width: 60vw;*/
+    background-color: white;
+
+
+}
+
+#detail button {
+    margin: .5em;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+#detail img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.skjul {
+    display: none;
+
+}
+
 /*########### ANIMATIONER ############*/
 
 
@@ -548,5 +621,15 @@ article img:hover {
 
     .quotes p {
         font-size: 1.5rem;
+    }
+
+    #detail .kaf {
+        width: 60vw;
+
+
+    }
+
+    #detail {
+        max-height: 100vh;
     }
 }
