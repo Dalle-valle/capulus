@@ -181,26 +181,6 @@ header {
 
 }
 
-
-
-
-#logo {
-    background-image: url(billeder/logo_capulus.svg);
-    height: 5vw;
-    width: 5vw;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0;
-    z-index: 1;
-    visibility: hidden;
-}
-
-#logo img {
-    padding: 0;
-}
-
 /*########### SPLASH ############*/
 
 

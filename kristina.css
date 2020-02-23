@@ -1,9 +1,287 @@
+/***************************
+LOGO
+***************************/
+
+.logo {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/***************************
+SVG
+***************************/
+header svg {
+    position: absolute;
+    fill: white;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+}
+
+.logo svg {
+    fill: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo circle {
+    stroke: #A68B6A;
+    stroke-width: 4;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transform-origin: center;
+    transform: rotate(45deg);
+    z-index: 1000;
+}
+
+/***************************
+NAME
+***************************/
+
+.name {
+    position: absolute;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: white;
+    font-size: 2.8rem;
+    transform: scale(0);
+}
+
+.name p {
+    font-weight: 600;
+}
+
+.clava {
+    transform: scaleX(-1);
+}
+
+.capulus_container2 {
+    position: absolute;
+    left: -218px;
+    top: -89px;
+    margin: 0;
+}
+
+.clava_container2 {
+    position: absolute;
+    top: -51px;
+    left: -150px;
+    margin: 0;
+}
+
+.capulus_sprite1 {
+    position: absolute;
+    left: -251px;
+    top: -45px;
+}
+
+.clava_sprite1 {
+    position: absolute;
+    top: -7px;
+    left: -185px;
+}
+
+
+/***********************
+QUOTES ANIMATION
+***********************/
+
 .quote,
 .author {
     opacity: 0;
     transition: 1s;
+    transition-delay: 8s;
 }
 
+/***********************
+ANIMATION CLASSES
+***********************/
+
+.stroke {
+    animation-name: stroke_kf;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.fill {
+    animation-name: fill_kf;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.scale_in {
+    animation-name: scale_in_kf;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+.rotate {
+    animation-name: rotate_kf;
+    animation-duration: 2.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.move_lr {
+    animation-name: move_lr_kf;
+    animation-duration: 2.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.move_rl {
+    animation-name: move_rl_kf;
+    animation-duration: 2.2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.hide_capulus_container2,
+.hide_clava_container2 {
+    animation-name: hide_containers_kf;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.hide_clava_container2 {
+    animation-duration: 3s;
+}
+
+.hide_capulus_sprite2,
+.hide_clava_sprite2 {
+    animation-name: hide_sprites_kf;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.hide_clava_sprite2 {
+    animation-duration: 3s;
+}
+
+.move_logo {
+    animation-name: move_logo_kf;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+
+/*
 .fade {
     opacity: 1;
+}
+*/
+
+/***********************
+ANIMATIONER
+***********************/
+
+@keyframes stroke_kf {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+@keyframes fill_kf {
+    0% {
+        fill: transparent;
+    }
+
+    100% {
+        fill: #A68B6A;
+    }
+}
+
+
+@keyframes scale_in_kf {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes rotate_kf {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes move_lr_kf {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(232px);
+    }
+}
+
+
+@keyframes move_rl_kf {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(169px);
+    }
+}
+
+
+@keyframes hide_containers_kf {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: 215px;
+    }
+}
+
+
+@keyframes hide_sprites_kf {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -215px;
+    }
+}
+
+@keyframes move_logo_kf {
+    100% {
+        top: 35px;
+        transform: scale(0.55)
+    }
 }
