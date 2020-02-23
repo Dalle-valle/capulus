@@ -59,6 +59,7 @@ function start() {
     hentKaffer(sheet1);
     hentQuotes(sheet2);
     logoAnimation();
+    visQuotes();
 }
 
 // Dynamisk
@@ -76,7 +77,6 @@ async function hentQuotes() {
     console.log(response);
     alleQuotes = await response.json();
     console.log(alleQuotes);
-    visQuotes();
 }
 
 function visKaffer() {
@@ -136,33 +136,6 @@ function visDetail(kaffe) {
     detail.querySelector("p + p").textContent += kaffe.gsx$oprindelse.$t;
     detail.querySelector("img").addEventListener("click", () => detail.classList.add("skjul"));
     document.querySelector("#detail").addEventListener("click", () => detail.classList.add("skjul"));
-
-}
-
-const quoteSpeed = 10000;
-
-setInterval(visQuotes, quoteSpeed);
-
-function visQuotes() {
-    const antal = alleQuotes.feed.entry.length;
-    const ranTal = Math.floor(Math.random() * antal);
-    //console.log(ranTal)
-    alleQuotes.feed.entry.forEach((quote, i) => {
-        console.log(i)
-        if (i == ranTal) {
-            console.log(quote.gsx$quote.$t)
-            document.querySelector(".quote").textContent = quote.gsx$quote.$t;
-            document.querySelector(".author").textContent = "- " + quote.gsx$author.$t;
-            document.querySelector(".quote").classList.add("fade");
-            document.querySelector(".author").classList.add("fade");
-        }
-    })
-    setTimeout(fadeUd, 8500);
-}
-
-function fadeUd() {
-    document.querySelector(".quote").classList.remove("fade");
-    document.querySelector(".author").classList.remove("fade");
 }
 
 // --------- LOGO ANIMATION -----------//
@@ -200,4 +173,30 @@ function nameAnimation() {
         document.querySelector(".logo").style.position = "fixed";
 
     })
+}
+
+const quoteSpeed = 9000;
+
+setInterval(visQuotes, quoteSpeed);
+
+function visQuotes() {
+    const antal = alleQuotes.feed.entry.length;
+    const ranTal = Math.floor(Math.random() * antal);
+    //console.log(ranTal)
+    alleQuotes.feed.entry.forEach((quote, i) => {
+        console.log(i)
+        if (i == ranTal) {
+            console.log(quote.gsx$quote.$t)
+            document.querySelector(".quote").textContent = quote.gsx$quote.$t;
+            document.querySelector(".author").textContent = "- " + quote.gsx$author.$t;
+            document.querySelector(".quote").classList.add("fade");
+            document.querySelector(".author").classList.add("fade");
+        }
+    })
+    setTimeout(fadeUd, 8000);
+}
+
+function fadeUd() {
+    document.querySelector(".quote").classList.remove("fade");
+    document.querySelector(".author").classList.remove("fade");
 }
