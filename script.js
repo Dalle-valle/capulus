@@ -178,21 +178,25 @@ function logoAnimation() {
             document.querySelector(".name").classList.add("scale_in");
         })
         document.querySelector(".name").addEventListener("animationend", () => {
-            document.querySelector(".capulus_container1").classList.add("move_lr");
-            document.querySelector(".clava_container1").classList.add("move_rl");
-            document.querySelector(".capulus_sprite1").classList.add("rotate");
-            document.querySelector(".clava_sprite1").classList.add("rotate");
-            document.querySelector(".capulus_container2").classList.add("hide_capulus_container2");
-            document.querySelector(".capulus_container2 p").classList.add("hide_capulus_sprite2");
-            document.querySelector(".clava_container2").classList.add("hide_clava_container2");
-            document.querySelector(".clava_container2 p").classList.add("hide_clava_sprite2");
-        })
-        document.querySelector(".clava_container2").addEventListener("animationend", () => {
-            document.querySelector(".logo").classList.add("move_logo");
-        })
-        document.querySelector(".logo").addEventListener("animationend", () => {
-            document.querySelector(".logo").style.position = "fixed";
+            setTimeout(nameAnimation, 1000);
         })
     })
+}
 
+
+function nameAnimation() {
+    document.querySelector(".capulus_container1").classList.add("move_lr");
+    document.querySelector(".clava_container1").classList.add("move_rl");
+    document.querySelector(".capulus_sprite1").classList.add("rotate");
+    document.querySelector(".clava_sprite1").classList.add("rotate");
+    document.querySelector(".capulus_container2").classList.add("hide_capulus_container2");
+    document.querySelector(".capulus_container2 p").classList.add("hide_capulus_sprite2");
+    document.querySelector(".clava_container2").classList.add("hide_clava_container2");
+    document.querySelector(".clava_container2 p").classList.add("hide_clava_sprite2");
+    document.querySelector(".clava_container2").addEventListener("animationend", () => {
+        document.querySelector(".logo").classList.add("move_logo");
+    })
+    document.querySelector(".logo").addEventListener("animationend", () => {
+        document.querySelector(".logo").style.position = "fixed";
+    })
 }
