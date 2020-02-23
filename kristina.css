@@ -4,9 +4,10 @@ LOGO
 
 .logo {
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transform: scale(0.6);
     z-index: 1000;
 }
 
@@ -125,6 +126,7 @@ ANIMATION CLASSES
     animation-timing-function: ease-in-out;
     transform-origin: center;
     animation-fill-mode: forwards;
+    animation-delay: 1s;
 }
 
 .rotate {
@@ -283,5 +285,12 @@ ANIMATIONER
     100% {
         top: 35px;
         transform: scale(0.55)
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .logo {
+        transform: scale(1.5);
+        top: 35%;
     }
 }
