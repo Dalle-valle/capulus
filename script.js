@@ -165,7 +165,7 @@ function fadeUd() {
     document.querySelector(".author").classList.remove("fade");
 }
 
-// LOGO ANIMATION
+// --------- LOGO ANIMATION -----------//
 function logoAnimation() {
     let circle = document.querySelector(".logo circle");
     let svg = document.querySelector(".logo svg");
@@ -198,5 +198,6 @@ function nameAnimation() {
     })
     document.querySelector(".logo").addEventListener("animationend", () => {
         document.querySelector(".logo").style.position = "fixed";
+
     })
 }

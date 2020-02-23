@@ -99,7 +99,7 @@ QUOTES ANIMATION
 .author {
     opacity: 0;
     transition: 1s;
-    transition-delay: 8s;
+    transition-delay: 9s;
 }
 
 /***********************
@@ -184,11 +184,9 @@ ANIMATION CLASSES
 }
 
 
-/*
 .fade {
     opacity: 1;
 }
-*/
 
 /***********************
 ANIMATIONER
@@ -286,6 +284,7 @@ ANIMATIONER
         transform: scale(0.55)
     }
 }
+
 @media only screen and (min-width: 600px) {
     .logo {
         transform: scale(1.5);
