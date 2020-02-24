@@ -129,6 +129,7 @@ IMG HOVER
     width: 100%;
     overflow: hidden;
     position: relative;
+    height: 380px
 }
 
 .overlay {
@@ -136,12 +137,14 @@ IMG HOVER
     text-align: center;
     bottom: 0;
     width: 100%;
+    height: 50px;
     color: #fff;
     background: rgba(0, 0, 0, 0.61);
     font-family: muli, sans-serif;
     text-transform: uppercase;
-    transform: translateY(23px);
+    transform: translateY(50px);
     z-index: 1;
+    font-size: 1rem;
 }
 
 article:hover .overlay {
