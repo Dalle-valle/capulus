@@ -75,9 +75,9 @@ header {
 
 #mylinks {
     display: none;
-    background-color: rgba(90, 108, 108, 0.54);
-    width: 43vw;
-    height: 100vh;
+    background-color: rgba(166, 139, 106, 0.72);
+    width: 40vw;
+    height: 30vh;
     float: right;
     justify-content: space-around;
 }
@@ -119,31 +119,22 @@ header {
 }
 
 
-#menu1 {
-    position: relative;
-    text-align: center;
-    top: 35vw;
-    left: 10vw;
-}
-
-#menu2 {
-    position: relative;
-    text-align: center;
-    top: 35vw;
-    left: 10vw;
-}
-
+#menu1,
+#menu2,
 #menu3 {
     position: relative;
-    text-align: center;
-    top: 35vw;
-    left: 10vw;
+    text-align: end;
+    top: -50px;
+    left: 0px;
 }
 
 .menu_wrapper {
     display: flex;
-    float: right;
     align-content: flex-end;
+    position: absolute;
+    right: 0;
+    top: 40px;
+
 
 
 }
