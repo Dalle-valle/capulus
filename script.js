@@ -59,7 +59,7 @@ function start() {
     hentKaffer(sheet1);
     hentQuotes(sheet2);
     logoAnimation();
-    visQuotes();
+
 }
 
 // Dynamisk
@@ -75,8 +75,10 @@ async function hentKaffer() {
 async function hentQuotes() {
     const response = await fetch(sheet2);
     console.log(response);
-    alleQuotes = await response.json();
-    console.log(alleQuotes);
+    let quotesJson = await response.json();
+    alleQuotes = quotesJson.feed.entry;
+    console.log(alleQuotes.length);
+    visQuotes();
 }
 
 function visKaffer() {
@@ -133,12 +135,19 @@ function visDetail(kaffe) {
     detail.querySelector("img").src = `billeder/large/${kaffe.gsx$billede.$t}.jpg`;
     detail.querySelector("h1").textContent = kaffe.gsx$navn.$t;
     detail.querySelector("p").textContent = kaffe.gsx$lang.$t;
+<<<<<<< HEAD
     detail.querySelector("p + p").textContent = kaffe.gsx$oprindelse.$t;
+=======
+    detail.querySelector("p + p").textContent += kaffe.gsx$oprindelse.$t;
+>>>>>>> origin/master
     detail.querySelector("img").addEventListener("click", () => detail.classList.add("skjul"));
     document.querySelector("#detail").addEventListener("click", () => detail.classList.add("skjul"));
 }
 
 // --------- LOGO ANIMATION -----------//
+
+
+
 function logoAnimation() {
     let circle = document.querySelector(".logo circle");
     let svg = document.querySelector(".logo svg");
@@ -180,10 +189,10 @@ const quoteSpeed = 9000;
 setInterval(visQuotes, quoteSpeed);
 
 function visQuotes() {
-    const antal = alleQuotes.feed.entry.length;
-    const ranTal = Math.floor(Math.random() * antal);
+    let antal = alleQuotes.length;
+    const ranTal = Math.floor(Math.random() * (antal - 1));
     //console.log(ranTal)
-    alleQuotes.feed.entry.forEach((quote, i) => {
+    alleQuotes.forEach((quote, i) => {
         console.log(i)
         if (i == ranTal) {
             console.log(quote.gsx$quote.$t)

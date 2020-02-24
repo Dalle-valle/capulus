@@ -39,21 +39,21 @@
 
                         <div id="menu0" class="hide">
                             <a href="index.html">
-                                <p>Capulus Clava</p>
+                                Capulus Clava
                             </a>
                         </div>
 
                         <div id="menu1" class="hide"> <a href="#">
-                                <p>Forside</p>
+                                Forside
                             </a></div>
 
 
                         <div id="menu2" class="hide"> <a href="#">
-                                <p>Kontakt</p>
+                                Kontakt
                             </a></div>
 
                         <div id="menu3" class="hide"> <a href="#">
-                                <p>Om os</p>
+                                Om os
                             </a></div>
 
 
@@ -110,38 +110,41 @@
             <p>Oprindelse: </p>
         </article>
     </section>
-    <nav id="filter_menu">
-        <h2>Sortér</h2>
-        <div id="filter_menu_links">
-            <div class="wrappy"> <button class="filter valgt" data-kategorier="alle">
-                    <p>Test1</p>
-                </button>
-                <button class="filter" data-kategorier="espresso">
-                    <p>Test2</p>
-                </button>
-                <button class="filter" data-kategorier="macchiato">
-                    <p>Test3</p>
-                </button>
+    <details>
+        <summary>Sortér</summary>
+        <nav id="filter_menu">
+            <div id="filter_menu_links">
+                <div class="wrappy"> <button class="filter valgt" data-kategorier="alle">
+                        <p>Test1</p>
+                    </button>
+                    <button class="filter" data-kategorier="espresso">
+                        <p>Test2</p>
+                    </button>
+                    <button class="filter" data-kategorier="macchiato">
+                        <p>Test3</p>
+                    </button>
+                </div>
+                <div class="wrappy">
+                    <button class="filter" data-kategorier="americano">
+                        <p>Test4</p>
+                    </button>
+                    <button class="filter" data-kategorier="lungo">
+                        <p>Test5</p>
+                    </button>
+                    <button class="filter" data-kategorier="cortado">
+                        <p>Test6</p>
+                    </button>
+                </div>
             </div>
-            <div class="wrappy">
-                <button class="filter" data-kategorier="americano">
-                    <p>Test4</p>
-                </button>
-                <button class="filter" data-kategorier="lungo">
-                    <p>Test5</p>
-                </button>
-                <button class="filter" data-kategorier="cortado">
-                    <p>Test6</p>
-                </button>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </details>
     <section id="index"></section>
     <template>
         <article class="coffee_all">
+            <h2 class="type"></h2>
             <img src="" alt="">
 
-            <h2 class="type"></h2>
+
 
             <p class="beskrivelse"></p>
 
@@ -152,6 +155,4 @@
 
 
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>

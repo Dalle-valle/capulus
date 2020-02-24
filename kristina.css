@@ -102,6 +102,26 @@ QUOTES ANIMATION
     transition: 1s;
 }
 
+
+/***********************
+DETAIL BUTTON
+***********************/
+
+details {
+    color: #A68B6A;
+}
+
+summary {
+    font-family: muli, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 3vw 5vw 1vw;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: end;
+}
+
+
 /***********************
 ANIMATION CLASSES
 ***********************/
@@ -131,21 +151,21 @@ ANIMATION CLASSES
 
 .rotate {
     animation-name: rotate_kf;
-    animation-duration: 2.2s;
+    animation-duration: 1.4s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
 
 .move_lr {
     animation-name: move_lr_kf;
-    animation-duration: 2.2s;
+    animation-duration: 1.4s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
 
 .move_rl {
     animation-name: move_rl_kf;
-    animation-duration: 2.2s;
+    animation-duration: 1.4s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
@@ -153,7 +173,7 @@ ANIMATION CLASSES
 .hide_capulus_container2,
 .hide_clava_container2 {
     animation-name: hide_containers_kf;
-    animation-duration: 2s;
+    animation-duration: 1.3s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     overflow: hidden;
@@ -161,19 +181,19 @@ ANIMATION CLASSES
 }
 
 .hide_clava_container2 {
-    animation-duration: 3s;
+    animation-duration: 1.6s;
 }
 
 .hide_capulus_sprite2,
 .hide_clava_sprite2 {
     animation-name: hide_sprites_kf;
-    animation-duration: 2s;
+    animation-duration: 1.3s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
 
 .hide_clava_sprite2 {
-    animation-duration: 3s;
+    animation-duration: 1.6s;
 }
 
 .move_logo {
@@ -285,7 +305,14 @@ ANIMATIONER
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
+    .logo {
+        top: 20%;
+        transform: scale(0.5);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
     .logo {
         transform: scale(1.5);
         top: 35%;
