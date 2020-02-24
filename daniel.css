@@ -31,14 +31,6 @@ h2 {
 
 /*########### BURGER MENU MOBILE ONLY ############*/
 
-
-
-#mylinks p {
-    color: white;
-    margin: 0;
-}
-
-
 header {
     position: fixed;
     width: 100%;
@@ -87,6 +79,7 @@ header {
     font-weight: 400;
     font-style: normal;
     color: white;
+    margin: 0;
 }
 
 
@@ -472,6 +465,7 @@ article img:hover {
         height: auto;
         float: none;
         justify-content: space-around;
+
     }
 
     .menu_wrapper {
@@ -504,11 +498,10 @@ article img:hover {
     }
 
 
-    header p {
+    header a {
         font-family: muli, sans-serif;
         font-weight: 400;
         font-style: normal;
-        padding-left: 8vw;
     }
 
     #burger_menu {
@@ -529,17 +522,21 @@ article img:hover {
     #menu1,
     #menu2,
     #menu3 {
-        position: relative;
-        text-align: center;
         top: 0;
+        left: 10px;
         opacity: 1;
+        padding: 0 60px;
+    }
+
+    #menu0 {
+        left: -400px;
     }
 
 
-    #menu0 p,
-    #menu1 p,
-    #menu2 p,
-    #menu3 p {
+    #menu0 a,
+    #menu1 a,
+    #menu2 a,
+    #menu3 a {
         color: black;
     }
 
