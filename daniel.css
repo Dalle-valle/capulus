@@ -545,57 +545,24 @@ article img:hover {
         display: none;
     }
 
-    #menu0 {
-        position: relative;
-        text-align: center;
-        top: 0;
-        opacity: 1;
-    }
-
-
-    #menu1 {
-        position: relative;
-        text-align: center;
-        top: 0;
-        opacity: 1;
-
-
-
-    }
-
-    #menu2 {
-        position: relative;
-        text-align: center;
-        top: 0;
-        opacity: 1;
-
-
-    }
-
+    #menu0,
+    #menu1,
+    #menu2,
     #menu3 {
         position: relative;
         text-align: center;
         top: 0;
         opacity: 1;
-
-
     }
 
-    #menu0 p {
-        color: black;
-    }
 
-    #menu1 p {
-        color: black;
-    }
-
-    #menu2 p {
-        color: black;
-    }
-
+    #menu0 p,
+    #menu1 p,
+    #menu2 p,
     #menu3 p {
         color: black;
     }
+
 
     #splasherino {
         height: 80vh;
