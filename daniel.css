@@ -197,7 +197,7 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    position: relative;
 }
 
 #index {
@@ -214,8 +214,13 @@ article {
     font-size: 2rem;
     position: absolute;
     color: #ffffff;
-    transform: translateY(-150px);
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
+    text-align: center;
+    width: 400px;
+    text-transform: capitalize;
 }
 
 /*
@@ -224,34 +229,6 @@ article img:hover {
 }*/
 
 /*########### Overblik ############*/
-#filter_menu_links {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-#filter_menu h2 {
-    text-align: center;
-}
-
-.filter {
-    height: 7vh;
-    width: 5rem;
-    padding: 10px;
-    background-color: #ede3d8;
-}
-
-.wrappy1 {
-    flex-grow: 1;
-    height: 5vw;
-    width: 7vw;
-}
-
-.wrappy2 {
-    flex-grow: 1;
-    height: 5vw;
-    width: 7vw;
-}
 
 #detail {
     position: fixed;
@@ -262,9 +239,6 @@ article img:hover {
     overflow: scroll;
 }
 
-.valgt {
-    background-color: #6c8181;
-}
 
 #detail .ret {
 
@@ -291,11 +265,6 @@ article img:hover {
 
 .skjul {
     display: none;
-
-}
-
-#index h2 {
-    text-transform: capitalize;
 }
 
 /*########### ANIMATIONER ############*/

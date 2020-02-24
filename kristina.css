@@ -122,6 +122,32 @@ summary {
 }
 
 /***********************
+SORTERINGS MENU
+***********************/
+
+.sorter_menu {
+    text-align: end;
+    padding: 0 5vw 2vw;
+}
+
+.sorter_menu button {
+    font-family: muli, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    width: 100px;
+    background-color: #ede3d8;
+    border: none;
+}
+
+.sorter.active {
+    background-color: #A68B6A;
+    color: white;
+}
+
+
+
+
+/***********************
 IMG HOVER
 ***********************/
 
@@ -133,18 +159,20 @@ IMG HOVER
 }
 
 .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    text-align: center;
     bottom: 0;
+    transform: translateY(50px);
     width: 100%;
     height: 50px;
-    color: #fff;
     background: rgba(0, 0, 0, 0.61);
     font-family: muli, sans-serif;
     text-transform: uppercase;
-    transform: translateY(50px);
-    z-index: 1;
     font-size: 1rem;
+    color: #fff;
+    z-index: 1;
 }
 
 article:hover .overlay {
@@ -152,6 +180,15 @@ article:hover .overlay {
     animation-duration: 0.3s;
     animation-timing-function: linear;
     animation-fill-mode: both;
+    cursor: pointer;
+}
+
+/***********************
+POP-UP
+***********************/
+
+#detail {
+    z-index: 2;
 }
 
 /***********************
