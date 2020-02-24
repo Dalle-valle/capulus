@@ -121,6 +121,35 @@ summary {
     text-align: end;
 }
 
+/***********************
+IMG HOVER
+***********************/
+
+.img_frame {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.61);
+    font-family: muli, sans-serif;
+    text-transform: uppercase;
+    transform: translateY(23px);
+    z-index: 1;
+}
+
+article:hover .overlay {
+    animation-name: come_up_kf;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
 
 /***********************
 ANIMATION CLASSES
@@ -302,6 +331,12 @@ ANIMATIONER
     100% {
         top: 35px;
         transform: scale(0.55)
+    }
+}
+
+@keyframes come_up_kf {
+    100% {
+        transform: translateY(1px);
     }
 }
 
