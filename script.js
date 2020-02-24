@@ -151,7 +151,7 @@ function logoAnimation() {
             document.querySelector(".name").classList.add("scale_in");
         })
         document.querySelector(".name").addEventListener("animationend", () => {
-            setTimeout(nameAnimation, 1000);
+            setTimeout(nameAnimation, 300);
         })
     })
 }

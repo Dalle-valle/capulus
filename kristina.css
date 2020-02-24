@@ -109,8 +109,8 @@ ANIMATION CLASSES
 
 .stroke {
     animation-name: stroke_kf;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
 
