@@ -179,7 +179,7 @@ ANIMATION CLASSES
 
 .move_logo {
     animation-name: move_logo_kf;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
