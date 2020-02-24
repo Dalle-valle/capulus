@@ -132,8 +132,8 @@ function visDetail(kaffe) {
     detail.querySelector("button").addEventListener("click", () => detail.classList.add("skjul"));
     detail.querySelector("img").src = `billeder/large/${kaffe.gsx$billede.$t}.jpg`;
     detail.querySelector("h1").textContent = kaffe.gsx$navn.$t;
-    detail.querySelector("p").textContent += kaffe.gsx$lang.$t;
-    detail.querySelector("p + p").textContent += kaffe.gsx$oprindelse.$t;
+    detail.querySelector("p").textContent = kaffe.gsx$lang.$t;
+    detail.querySelector("p + p").textContent = kaffe.gsx$oprindelse.$t;
     detail.querySelector("img").addEventListener("click", () => detail.classList.add("skjul"));
     document.querySelector("#detail").addEventListener("click", () => detail.classList.add("skjul"));
 }
