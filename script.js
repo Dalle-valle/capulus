@@ -243,6 +243,20 @@ function nameAnimation() {
 
 
 
+window.addEventListener("scroll", stopAnimation);
+
+function stopAnimation() {
+    document.querySelector(".capulus_container1").classList.remove("move_lr");
+    document.querySelector(".clava_container1").classList.remove("move_rl");
+    document.querySelector(".capulus_sprite1").classList.remove("rotate");
+    document.querySelector(".clava_sprite1").classList.remove("rotate");
+    document.querySelector(".capulus_container2").classList.remove("hide_capulus_container2");
+    document.querySelector(".capulus_container2 p").classList.remove("hide_capulus_sprite2");
+    document.querySelector(".clava_container2").classList.remove("hide_clava_container2");
+    document.querySelector(".clava_container2 p").classList.remove("hide_clava_sprite2");
+    document.querySelector(".logo").classList.remove("move_logo");
+
+}
 
 
 /***************************
