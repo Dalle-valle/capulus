@@ -274,6 +274,7 @@ ANIMATION CLASSES
 
 .end {
     top: 35px;
+    transform: scale(0.55);
 }
 
 .fade {
@@ -373,7 +374,7 @@ ANIMATIONER
 @keyframes move_logo_kf {
     100% {
         top: 35px;
-        transform: scale(0.55)
+        transform: scale(0.55);
     }
 }
 
