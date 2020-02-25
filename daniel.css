@@ -130,8 +130,9 @@ header {
     top: 40px;
 }
 
-/************************
+/*************************
 SPLASH
+*************************/
 
 
 #splash {
@@ -499,7 +500,7 @@ article img:hover {
     }
 
 
-    #splasherino {
+    #forside {
         height: 80vh;
     }
 
