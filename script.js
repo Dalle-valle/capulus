@@ -1,37 +1,44 @@
+/***************************
+VARIABLER
+***************************/
 let alleKaffer;
 let alleQuotes;
 let filter = "alle";
 const sheet1 = "https://spreadsheets.google.com/feeds/list/1Z7tSa0z9rOrASbBgI6iaUnulzGBZXfdntih4nNE-jn8/1/public/values?alt=json";
 const sheet2 = "https://spreadsheets.google.com/feeds/list/1Z7tSa0z9rOrASbBgI6iaUnulzGBZXfdntih4nNE-jn8/2/public/values?alt=json";
 
-document.addEventListener("DOMContentLoaded", start);
+/***************************************************************************************************************************************
+Kalder funktionen start() når alt content er loaded
+***************************************************************************************************************************************/
 
+document.addEventListener("DOMContentLoaded", start);
+/***************************************************************************************************************************************
+Tilføjer eventlisteners burgermenuen og lytter til om der klikkes på den, dette kalder funktionen menuOpenClose().
+***************************************************************************************************************************************/
 
 document.querySelector("#burger_menu").addEventListener("touched", menuOpenClose);
 document.querySelector("#burger_menu").addEventListener("click", menuOpenClose);
-const burgz = document.querySelector("#menu_burger_bar");
+
+/***************************************************************************************************************************************
+Funktionen der styrer om burgermenuen er åben eller lukket. Burgermenuen laves om til en konstant (bMenu) og hvis den er sat til display: block (synlig) så skal den lukkes når der klikkes, og hvis den er sat til display: none (lukket) så skal den åbnes. Samtidigt tilføjes der animationer der blurrer baggrunden når menuen er fremme, samt fjerner blurren når menuen er skjult.
+***************************************************************************************************************************************/
 
 
 function menuOpenClose() {
     console.log("menu pressed");
     this.classList.toggle("burger_kryds");
 
-    let x = document.querySelector("#mylinks");
-    if (x.style.display === "block") {
-        x.style.display = "none";
+    const bMenu = document.querySelector("#mylinks");
+    if (bMenu.style.display === "block") {
+        bMenu.style.display = "none";
 
         document.querySelector("#burger_menu").textContent = "☰";
         document.querySelector(".menu_wrapper").classList.remove("fadein");
         document.querySelector(".quotes").classList.remove("blur");
         document.querySelector(".quotes").classList.add("blurback");
 
-
-
-
-
-
     } else {
-        x.style.display = "block";
+        bMenu.style.display = "block";
         document.querySelector("#burger_menu").textContent = "X";
         document.querySelector(".menu_wrapper").classList.add("fadein");
         document.querySelector(".quotes").classList.remove("blurback");
@@ -41,8 +48,10 @@ function menuOpenClose() {
     }
 }
 
+/***************************************************************************************************************************************
+Tilføjer eventlistener til burgermenuen og animerer menuens links med en kort delay så de ikke kommer frem på samme tid. Samtidigt blurrer/fader den baggrundens quotes imens menuen er åben.
+***************************************************************************************************************************************/
 
-// Animation til at få burgermenuens links til at animere med delay.
 document.querySelector(".menu_wrapper").addEventListener("animationend", menuFlow);
 
 function menuFlow() {
@@ -54,6 +63,9 @@ function menuFlow() {
     document.querySelector(".quotes").classList.add("blur");
 }
 
+/***************************************************************************************************************************************
+Funktionen start() som henter json data som inkluderer begge sider på vores google sheet. (Både kaffe og quotes). Funktionen starter også animationen på logoet.
+***************************************************************************************************************************************/
 
 function start() {
     hentKaffer(sheet1);
@@ -61,8 +73,13 @@ function start() {
     logoAnimation();
 
 }
+/***************************
+JSON
+***************************/
 
-// Dynamisk
+/***************************************************************************************************************************************
+Funktionen der henter dataen fra google sheet (json). Kalder funktionen visKaffer().
+***************************************************************************************************************************************/
 
 
 async function hentKaffer() {
@@ -72,6 +89,9 @@ async function hentKaffer() {
     console.log(alleKaffer);
     visKaffer();
 }
+/***************************************************************************************************************************************
+Funktionen der henter dataen fra google sheet (json). Kalder funktionen visQuotes().
+***************************************************************************************************************************************/
 async function hentQuotes() {
     const response = await fetch(sheet2);
     console.log(response);
@@ -80,6 +100,16 @@ async function hentQuotes() {
     console.log(alleQuotes.length);
     visQuotes();
 }
+
+/***************************
+GOOGLE SHEET - TEMPLATE
+***************************/
+
+/***************************************************************************************************************************************
+Funktionen der indsætter dataen fra google sheet til vores HTML. Den kloner vores template tag og gentager det for hver gang vi har indtastet informationen i google sheet. På den her måde kan vi printe billeder og tekst ud i det specifikke element vi ønsker. Vi har lavet informationen om til et array som indeholder al dataen og man kan derefter henvise til et specifikt sted i vores sheet (vha. forEach).
+
+Her tilføjer vi også en eventlistener som lytter til om der klikkes på et billede. Når der klikkes på et billede kaldes der en funktion der skal vise detaljer om produktet.
+***************************************************************************************************************************************/
 
 function visKaffer() {
     console.log(alleKaffer)
@@ -100,7 +130,13 @@ function visKaffer() {
     })
 }
 
+/***************************
+FILTRERING
+***************************/
 
+/***************************************************************************************************************************************
+Funktionen der tilføjer eventlisteners på alle filterknapper som er der for at vi kan filtrere vores content.
+***************************************************************************************************************************************/
 
 function klikListeners() {
     document.querySelectorAll(".filter").forEach(elm => {
@@ -110,6 +146,10 @@ function klikListeners() {
 
 
 }
+
+/***************************************************************************************************************************************
+Funktionen der filtrerer vores kategorier når der klikkes på de forskellige filtre.
+***************************************************************************************************************************************/
 
 function filtrering() {
     console.log("FILTER");
@@ -124,11 +164,17 @@ function filtrering() {
 
 };
 
+/***************************************************************************************************************************************
+Funktionen der fjerner classen "skjul" så detaljevinduet kan lukkes.
+***************************************************************************************************************************************/
+
 function fjernClass() {
     detail.classList.remove("skjul");
 }
 
-
+/***************************************************************************************************************************************
+Funktionen der henter dataen fra google sheet når der vises detaljer (altså klikkes på et billede).
+***************************************************************************************************************************************/
 function visDetail(kaffe) {
 
     detail.querySelector("button").addEventListener("click", () => detail.classList.add("skjul"));
@@ -144,10 +190,14 @@ function visDetail(kaffe) {
     document.querySelector("#detail").addEventListener("click", () => detail.classList.add("skjul"));
 }
 
-// --------- LOGO ANIMATION -----------//
+/***************************
+LOGO ANIMATION
+***************************/
 
 
-
+/***************************************************************************************************************************************
+KRISTINA UDFYLDE DE HER.
+***************************************************************************************************************************************/
 function logoAnimation() {
     let circle = document.querySelector(".logo circle");
     let svg = document.querySelector(".logo svg");
@@ -184,16 +234,32 @@ function nameAnimation() {
     })
 }
 
+
+
+
+
+/***************************
+QUOTES
+***************************/
+
+/***************************************************************************************************************************************
+Sætter quotes til at være synlige i 9 sekunder og skifte hvert 10. sekund
+***************************************************************************************************************************************/
 const quoteSpeed = 9000;
 
 setInterval(visQuotes, quoteSpeed);
+
+
+/***************************************************************************************************************************************
+Funktionen der tjekker efter hvilken quote der skal printes. Vores random quote generator skriver både author og quote som hører sammen med et ID fra google sheet.
+***************************************************************************************************************************************/
 
 function visQuotes() {
     let antal = alleQuotes.length;
     const ranTal = Math.floor(Math.random() * (antal - 1));
     //console.log(ranTal)
     alleQuotes.forEach((quote, i) => {
-        console.log(i)
+        //        console.log(i)
         if (i == ranTal) {
             console.log(quote.gsx$quote.$t)
             document.querySelector(".quote").textContent = quote.gsx$quote.$t;

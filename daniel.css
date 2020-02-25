@@ -269,6 +269,9 @@ article img:hover {
 
 /*########### ANIMATIONER ############*/
 
+.paused {
+    animation-play-state: paused;
+}
 
 .fadein {
     animation-name: fadein;
