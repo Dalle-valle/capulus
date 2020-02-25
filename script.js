@@ -74,7 +74,6 @@ function start() {
     hentKaffer(sheet1);
     hentQuotes(sheet2);
     logoAnimation();
-
 }
 
 /***************************
@@ -209,6 +208,7 @@ KRISTINA UDFYLDE DE HER.
 function logoAnimation() {
     let circle = document.querySelector(".logo circle");
     let svg = document.querySelector(".logo svg");
+    logoReady == true;
 
     circle.classList.add("stroke");
     circle.addEventListener("animationend", () => {
@@ -243,54 +243,88 @@ function nameAnimation() {
 }
 
 
+window.addEventListener("scroll", moonBar);
 
-window.addEventListener("scroll", LogoScroll);
-
-function logoScroll() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        logoReady == false;
-
-
-
-
+function moonBar() {
+    window.onscroll = function () {
+        scrollFunction();
     }
+}
 
-
-    /***************************
-    QUOTES
-    ***************************/
-
-    /***************************************************************************************************************************************
-    Sætter quotes til at være synlige i 9 sekunder og skifte hvert 10. sekund
-    ***************************************************************************************************************************************/
-
-    const quoteSpeed = 9000;
-
-    setInterval(visQuotes, quoteSpeed);
-
-
-    /***************************************************************************************************************************************
-    Funktionen der tjekker efter hvilken quote der skal printes. Vores random quote generator skriver både author og quote som hører sammen med et ID fra google sheet.
-    ***************************************************************************************************************************************/
-
-    function visQuotes() {
-        let antal = alleQuotes.length;
-        const ranTal = Math.floor(Math.random() * (antal - 1));
-        //console.log(ranTal)
-        alleQuotes.forEach((quote, i) => {
-            //        console.log(i)
-            if (i == ranTal) {
-                console.log(quote.gsx$quote.$t)
-                document.querySelector(".quote").textContent = quote.gsx$quote.$t;
-                document.querySelector(".author").textContent = "- " + quote.gsx$author.$t;
-                document.querySelector(".quote").classList.add("fade");
-                document.querySelector(".author").classList.add("fade");
-            }
-        })
-        setTimeout(fadeUd, 8000);
+function scrollFunction() {
+    if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+        stopAnimation();
+        animationGoHome();
     }
+}
 
-    function fadeUd() {
-        document.querySelector(".quote").classList.remove("fade");
-        document.querySelector(".author").classList.remove("fade");
-    }
+
+
+function stopAnimation() {
+    document.querySelector(".logo circle").classList.remove("stroke");
+    document.querySelector(".logo svg").classList.remove("fill");
+    document.querySelector(".name").classList.remove("scale_in");
+    document.querySelector(".capulus_container1").classList.remove("move_lr");
+    document.querySelector(".clava_container1").classList.remove("move_rl");
+    document.querySelector(".capulus_sprite1").classList.remove("rotate");
+    document.querySelector(".clava_sprite1").classList.remove("rotate");
+    document.querySelector(".capulus_container2").classList.remove("hide_capulus_container2");
+    document.querySelector(".capulus_container2 p").classList.remove("hide_capulus_sprite2");
+    document.querySelector(".clava_container2").classList.remove("hide_clava_container2");
+    document.querySelector(".clava_container2 p").classList.remove("hide_clava_sprite2");
+    document.querySelector(".logo").classList.remove("move_logo");
+    animationGoHome();
+}
+
+function animationGoHome() {
+    console.log("animation go home");
+    document.querySelector(".logo svg").style.fill = "#A68B6A";
+    document.querySelector(".logo circle").style.strokeDashoffset = "0";
+    document.querySelector(".name").style.transform = "scale(1)";
+    document.querySelector(".capulus_sprite1").style.transform = "translateX(232px)";
+    document.querySelector(".clava_sprite1").style.transform = "translateX(169px)";
+    document.querySelector(".capulus_container2").style.display = "none";
+    document.querySelector(".clava_container2").style.display = "none";
+    document.querySelector(".logo").style.top = "35px";
+    document.querySelector(".logo").style.transform = "scale(0.55)";
+    document.querySelector(".logo").style.position = "fixed";
+}
+
+/***************************
+QUOTES
+***************************/
+
+/***************************************************************************************************************************************
+Sætter quotes til at være synlige i 9 sekunder og skifte hvert 10. sekund
+***************************************************************************************************************************************/
+
+const quoteSpeed = 9000;
+
+setInterval(visQuotes, quoteSpeed);
+
+
+/***************************************************************************************************************************************
+Funktionen der tjekker efter hvilken quote der skal printes. Vores random quote generator skriver både author og quote som hører sammen med et ID fra google sheet.
+***************************************************************************************************************************************/
+
+function visQuotes() {
+    let antal = alleQuotes.length;
+    const ranTal = Math.floor(Math.random() * (antal - 1));
+    //console.log(ranTal)
+    alleQuotes.forEach((quote, i) => {
+        //        console.log(i)
+        if (i == ranTal) {
+            console.log(quote.gsx$quote.$t)
+            document.querySelector(".quote").textContent = quote.gsx$quote.$t;
+            document.querySelector(".author").textContent = "- " + quote.gsx$author.$t;
+            document.querySelector(".quote").classList.add("fade");
+            document.querySelector(".author").classList.add("fade");
+        }
+    })
+    setTimeout(fadeUd, 8000);
+}
+
+function fadeUd() {
+    document.querySelector(".quote").classList.remove("fade");
+    document.querySelector(".author").classList.remove("fade");
+}

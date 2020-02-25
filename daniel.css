@@ -253,6 +253,26 @@ article img:hover {
     display: none;
 }
 
+/***********************************
+OM OS
+***********************************/
+
+
+
+
+#omos .sectionwrapper {
+    display: grid;
+}
+
+
+
+
+
+
+#omos h1 {
+    margin-top: 8vh;
+}
+
 /*########### ANIMATIONER ############*/
 
 .paused {
@@ -315,6 +335,14 @@ article img:hover {
     animation-duration: 1.8s;
     animation-fill-mode: forwards;
 
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.shown {
+    visibility: visible;
 }
 
 @keyframes appear {
