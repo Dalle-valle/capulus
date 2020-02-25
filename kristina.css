@@ -272,9 +272,7 @@ ANIMATION CLASSES
     animation-fill-mode: forwards;
 }
 
-<<<<<<< HEAD
-=======
-.end {
+<<<<<<< HEAD=======.end {
     background-image: url(billeder/logo_end.svg);
     top: 35px;
     transform: scale(0.55);
@@ -282,7 +280,7 @@ ANIMATION CLASSES
     transition-duration: 0.1s;
 }
 
->>>>>>> origin/master
+
 .fade {
     opacity: 1;
 }

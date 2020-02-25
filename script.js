@@ -259,7 +259,6 @@ function scrollFunction() {
 }
 
 
-
 function stopAnimation() {
     document.querySelector(".logo circle").classList.remove("stroke");
     document.querySelector(".logo svg").classList.remove("fill");
