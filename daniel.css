@@ -8,7 +8,7 @@ GENERELT
 
 body {
     margin: 0;
-    background-color: #A68B6A;
+    background-color: rgba(166, 139, 106, 0.35);
 }
 
 img {
@@ -139,7 +139,7 @@ SPLASH
     width: 100vw;
     height: 100vh;
     background-image: url(billeder/mobile_splash.jpg);
-    background-size: 100%;
+    background-size: 120%;
     background-repeat: no-repeat;
 }
 
@@ -257,21 +257,48 @@ article img:hover {
 OM OS
 ***********************************/
 
+#omos_splash {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(billeder/om_mobile_splash.jpg);
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
 
 
-
-#omos .sectionwrapper {
+#omos {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 0px;
+
+}
+
+#omos h2 {
+    font-size: 2rem;
+    /*    position: absolute;*/
+    color: #333;
+    /*
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+*/
+    z-index: 1;
+    text-align: center;
+    width: 400px;
+    text-transform: capitalize;
 }
 
 
 
 
-
-
-#omos h1 {
+#omos h2,
+h1 {
     margin-top: 8vh;
 }
+
 
 /*########### ANIMATIONER ############*/
 
@@ -442,6 +469,12 @@ OM OS
 @media only screen and (min-width: 1024px) {
     #splash {
         background-image: url(billeder/splash_desktop_placeholder.png);
+        background-size: 100%;
+    }
+
+    #omos_splash {
+        background-image: url(billeder/om_desktop_splash.jpg);
+        background-size: 100%;
     }
 
     #mylinks {
