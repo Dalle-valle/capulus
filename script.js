@@ -243,85 +243,6 @@ function nameAnimation() {
 }
 
 
-//
-////window.addEventListener("scroll", logoScroll);
-////
-////function logoScroll() {
-////    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-////        logoReady == false;
-////        logoFinish();
-////
-////
-////
-////
-////    }
-////}
-////
-////function logoFinish() {
-//
-////    document.querySelector(".logo").offsetWidth;
-////
-////    document.querySelector(".capulus_container1").offsetWidth;
-////
-////    document.querySelector(".clava_container1").offsetWidth;
-////
-////    document.querySelector(".capulus_sprite1").offsetWidth;
-////
-////    document.querySelector(".clava_sprite1").offsetWidth;
-////
-////    document.querySelector(".capulus_container2").offsetWidth;
-////
-////    document.querySelector(".capulus_container2 p").offsetWidth;
-////
-////    document.querySelector(".clava_container2").offsetWidth;
-////
-////    document.querySelector(".clava_container2 p").offsetWidth;
-////
-////    document.querySelector(".clava_container2").offsetWidth;
-////
-////    document.querySelector(".clava_container2").offsetWidth;
-//
-//let elements = [];
-//console.log("jninhnkjnhn", elements);
-//elements.push(document.querySelector(".logo"));
-//
-//elements.push(document.querySelector(".capulus_container1"));
-//
-//elements.push(document.querySelector(".clava_container1"));
-//
-//elements.push(document.querySelector(".capulus_sprite1"));
-//
-//elements.push(document.querySelector(".clava_sprite1"));
-//
-//elements.push(document.querySelector(".capulus_container2"));
-//
-//elements.push(document.querySelector(".capulus_container2 p"));
-//
-//elements.push(document.querySelector(".clava_container2"));
-//
-//elements.push(document.querySelector(".clava_container2 p"));
-//
-//elements.push(document.querySelector(".clava_container2"));
-//
-//elements.push(document.querySelector(".clava_container2"));
-//
-//elements.forEach(elm => {
-//    elm.style.position = "absolute";
-//    elm.style.left = "50vw";
-//    elm.style.backgroundColor = "navajowhite";
-//    console.log(elm.style.position);
-//    elm.classList.remove
-//})
-
-//    document.querySelector(".logo").classList.add("hide")
-//    document.querySelector(".logo").addEventListener("animationend", popBack);
-//
-//    function popBack() {
-//        document.querySelector(".logo").classList.remove("hide");
-//    }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 window.addEventListener("scroll", moonBar);
 
 function moonBar() {
@@ -353,54 +274,6 @@ function stopAnimation() {
     document.querySelector(".clava_container2 p").classList.remove("hide_clava_sprite2");
     document.querySelector(".logo").classList.remove("move_logo");
     animationGoHome();
-=======
-window.addEventListener("scroll", logoScroll);
-=======
->>>>>>> origin/master
-
-
-
-
-
-<<<<<<< HEAD
-    }
-}
-
-function logoFinish() {
-
-    //    document.querySelector(".logo").offsetWidth;
-    //
-    //    document.querySelector(".capulus_container1").offsetWidth;
-    //
-    //    document.querySelector(".clava_container1").offsetWidth;
-    //
-    //    document.querySelector(".capulus_sprite1").offsetWidth;
-    //
-    //    document.querySelector(".clava_sprite1").offsetWidth;
-    //
-    //    document.querySelector(".capulus_container2").offsetWidth;
-    //
-    //    document.querySelector(".capulus_container2 p").offsetWidth;
-    //
-    //    document.querySelector(".clava_container2").offsetWidth;
-    //
-    //    document.querySelector(".clava_container2 p").offsetWidth;
-    //
-    //    document.querySelector(".clava_container2").offsetWidth;
-    //
-    //    document.querySelector(".clava_container2").offsetWidth;
-
-
-    document.querySelector(".logo").classList.add("hide")
-    document.querySelector(".logo").addEventListener("animationend", popBack);
-
-    function popBack() {
-        document.querySelector(".logo").classList.remove("hide");
-    }
-
-
-
->>>>>>> origin/master
 }
 
 function animationGoHome() {
@@ -417,8 +290,6 @@ function animationGoHome() {
     document.querySelector(".logo").style.position = "fixed";
 }
 
-=======
->>>>>>> origin/master
 /***************************
 QUOTES
 ***************************/
