@@ -273,6 +273,7 @@ ANIMATION CLASSES
 }
 
 .end {
+    background-image: url(billeder/logo_end.svg);
     top: 35px;
     transform: scale(0.55);
 }
