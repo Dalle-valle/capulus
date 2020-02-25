@@ -4,6 +4,8 @@
     background-color: aquamarine;
 }
 
+
+
 #detail {
     position: fixed;
     top: 0;
@@ -14,30 +16,29 @@
 }
 
 
+
 #detail .kaf {
     margin: 4rem auto;
     padding: 4rem;
-    height: 60vh;
-    width: 70vw;
-    background-color: #ede3d8;
+    height: 90vh;
+    width: 100vw;
 
 }
 
 #detail button {
     margin: .5em;
     background-color: rgba(240, 248, 255, 0);
-
 }
 
 
+/*
 .skjul {
     display: none;
 }
+*/
 
-#detail h2 {
-    align-content: center;
-}
+#detail h1 {
+    padding-top: 50px;
+    text-align: center;
 
-#detail p {
-    align-content: left;
 }
