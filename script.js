@@ -255,6 +255,9 @@ function stopAnimation() {
     document.querySelector(".clava_container2").classList.remove("hide_clava_container2");
     document.querySelector(".clava_container2 p").classList.remove("hide_clava_sprite2");
     document.querySelector(".logo").classList.remove("move_logo");
+    document.querySelector(".logo").classList.add("end");
+
+
 
 }
 
