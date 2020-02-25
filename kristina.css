@@ -272,6 +272,9 @@ ANIMATION CLASSES
     animation-fill-mode: forwards;
 }
 
+.end {
+    top: 35px;
+}
 
 .fade {
     opacity: 1;

@@ -240,15 +240,13 @@ article img:hover {
 }
 
 
-#detail .ret {
+#detail .kaf {
 
     margin: 4rem auto;
     padding: 4rem;
     min-height: 50vh;
     /*    width: 60vw;*/
     background-color: white;
-
-
 }
 
 #detail button {
