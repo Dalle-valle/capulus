@@ -1,6 +1,7 @@
 /***************************
 VARIABLER
 ***************************/
+
 let alleKaffer;
 let alleQuotes;
 let filter = "alle";
@@ -12,6 +13,7 @@ Kalder funktionen start() når alt content er loaded
 ***************************************************************************************************************************************/
 
 document.addEventListener("DOMContentLoaded", start);
+
 /***************************************************************************************************************************************
 Tilføjer eventlisteners burgermenuen og lytter til om der klikkes på den, dette kalder funktionen menuOpenClose().
 ***************************************************************************************************************************************/
@@ -73,6 +75,7 @@ function start() {
     logoAnimation();
 
 }
+
 /***************************
 JSON
 ***************************/
@@ -89,9 +92,11 @@ async function hentKaffer() {
     console.log(alleKaffer);
     visKaffer();
 }
+
 /***************************************************************************************************************************************
 Funktionen der henter dataen fra google sheet (json). Kalder funktionen visQuotes().
 ***************************************************************************************************************************************/
+
 async function hentQuotes() {
     const response = await fetch(sheet2);
     console.log(response);
@@ -175,6 +180,7 @@ function fjernClass() {
 /***************************************************************************************************************************************
 Funktionen der henter dataen fra google sheet når der vises detaljer (altså klikkes på et billede).
 ***************************************************************************************************************************************/
+
 function visDetail(kaffe) {
 
     detail.querySelector("button").addEventListener("click", () => detail.classList.add("skjul"));
@@ -198,6 +204,7 @@ LOGO ANIMATION
 /***************************************************************************************************************************************
 KRISTINA UDFYLDE DE HER.
 ***************************************************************************************************************************************/
+
 function logoAnimation() {
     let circle = document.querySelector(".logo circle");
     let svg = document.querySelector(".logo svg");
@@ -245,6 +252,7 @@ QUOTES
 /***************************************************************************************************************************************
 Sætter quotes til at være synlige i 9 sekunder og skifte hvert 10. sekund
 ***************************************************************************************************************************************/
+
 const quoteSpeed = 9000;
 
 setInterval(visQuotes, quoteSpeed);
