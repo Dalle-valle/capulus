@@ -317,6 +317,14 @@ article img:hover {
 
 }
 
+.hide {
+    visibility: hidden;
+}
+
+.shown {
+    visibility: visible;
+}
+
 @keyframes appear {
     0% {
         transform: translateX(-100%)

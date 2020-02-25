@@ -7,6 +7,7 @@ let alleQuotes;
 let filter = "alle";
 const sheet1 = "https://spreadsheets.google.com/feeds/list/1Z7tSa0z9rOrASbBgI6iaUnulzGBZXfdntih4nNE-jn8/1/public/values?alt=json";
 const sheet2 = "https://spreadsheets.google.com/feeds/list/1Z7tSa0z9rOrASbBgI6iaUnulzGBZXfdntih4nNE-jn8/2/public/values?alt=json";
+let logoReady = true;
 
 /***************************************************************************************************************************************
 Kalder funktionen start() når alt content er loaded
@@ -207,6 +208,7 @@ KRISTINA UDFYLDE DE HER.
 function logoAnimation() {
     let circle = document.querySelector(".logo circle");
     let svg = document.querySelector(".logo svg");
+    logoReady == true;
 
     circle.classList.add("stroke");
     circle.addEventListener("animationend", () => {
@@ -242,6 +244,7 @@ function nameAnimation() {
 
 
 
+<<<<<<< HEAD
 window.addEventListener("scroll", moonBar);
 
 function moonBar() {
@@ -273,6 +276,55 @@ function stopAnimation() {
     document.querySelector(".clava_container2 p").classList.remove("hide_clava_sprite2");
     document.querySelector(".logo").classList.remove("move_logo");
     animationGoHome();
+=======
+window.addEventListener("scroll", logoScroll);
+
+function logoScroll() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        logoReady == false;
+        logoFinish();
+
+
+
+
+    }
+}
+
+function logoFinish() {
+
+    //    document.querySelector(".logo").offsetWidth;
+    //
+    //    document.querySelector(".capulus_container1").offsetWidth;
+    //
+    //    document.querySelector(".clava_container1").offsetWidth;
+    //
+    //    document.querySelector(".capulus_sprite1").offsetWidth;
+    //
+    //    document.querySelector(".clava_sprite1").offsetWidth;
+    //
+    //    document.querySelector(".capulus_container2").offsetWidth;
+    //
+    //    document.querySelector(".capulus_container2 p").offsetWidth;
+    //
+    //    document.querySelector(".clava_container2").offsetWidth;
+    //
+    //    document.querySelector(".clava_container2 p").offsetWidth;
+    //
+    //    document.querySelector(".clava_container2").offsetWidth;
+    //
+    //    document.querySelector(".clava_container2").offsetWidth;
+
+
+    document.querySelector(".logo").classList.add("hide")
+    document.querySelector(".logo").addEventListener("animationend", popBack);
+
+    function popBack() {
+        document.querySelector(".logo").classList.remove("hide");
+    }
+
+
+
+>>>>>>> origin/master
 }
 
 function animationGoHome() {
