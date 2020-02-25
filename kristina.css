@@ -272,12 +272,6 @@ ANIMATION CLASSES
     animation-fill-mode: forwards;
 }
 
-.end {
-    background-image: url(billeder/logo_end.svg);
-    top: 35px;
-    transform: scale(0.55);
-}
-
 .fade {
     opacity: 1;
 }

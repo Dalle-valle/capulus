@@ -73,7 +73,6 @@ function start() {
     hentKaffer(sheet1);
     hentQuotes(sheet2);
     logoAnimation();
-
 }
 
 /***************************
@@ -243,9 +242,27 @@ function nameAnimation() {
 
 
 
-window.addEventListener("scroll", stopAnimation);
+window.addEventListener("scroll", moonBar);
+
+function moonBar() {
+    window.onscroll = function () {
+        scrollFunction();
+    }
+}
+
+function scrollFunction() {
+    if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+        stopAnimation();
+        animationGoHome();
+    }
+}
+
+
 
 function stopAnimation() {
+    document.querySelector(".logo circle").classList.remove("stroke");
+    document.querySelector(".logo svg").classList.remove("fill");
+    document.querySelector(".name").classList.remove("scale_in");
     document.querySelector(".capulus_container1").classList.remove("move_lr");
     document.querySelector(".clava_container1").classList.remove("move_rl");
     document.querySelector(".capulus_sprite1").classList.remove("rotate");
@@ -255,9 +272,22 @@ function stopAnimation() {
     document.querySelector(".clava_container2").classList.remove("hide_clava_container2");
     document.querySelector(".clava_container2 p").classList.remove("hide_clava_sprite2");
     document.querySelector(".logo").classList.remove("move_logo");
-
+    animationGoHome();
 }
 
+function animationGoHome() {
+    console.log("animation go home");
+    document.querySelector(".logo svg").style.fill = "#A68B6A";
+    document.querySelector(".logo circle").style.strokeDashoffset = "0";
+    document.querySelector(".name").style.transform = "scale(1)";
+    document.querySelector(".capulus_sprite1").style.transform = "translateX(232px)";
+    document.querySelector(".clava_sprite1").style.transform = "translateX(169px)";
+    document.querySelector(".capulus_container2").style.display = "none";
+    document.querySelector(".clava_container2").style.display = "none";
+    document.querySelector(".logo").style.top = "35px";
+    document.querySelector(".logo").style.transform = "scale(0.55)";
+    document.querySelector(".logo").style.position = "fixed";
+}
 
 /***************************
 QUOTES
