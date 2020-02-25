@@ -276,6 +276,8 @@ ANIMATION CLASSES
     background-image: url(billeder/logo_end.svg);
     top: 35px;
     transform: scale(0.55);
+    transition-property: all;
+    transition-duration: 0.1s;
 }
 
 .fade {

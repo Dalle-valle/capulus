@@ -209,6 +209,7 @@ KRISTINA UDFYLDE DE HER.
 function logoAnimation() {
     let circle = document.querySelector(".logo circle");
     let svg = document.querySelector(".logo svg");
+    logoReady == true;
 
     circle.classList.add("stroke");
     circle.addEventListener("animationend", () => {
@@ -244,53 +245,91 @@ function nameAnimation() {
 
 
 
-window.addEventListener("scroll", LogoScroll);
+window.addEventListener("scroll", logoScroll);
 
 function logoScroll() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         logoReady == false;
+        logoFinish();
 
 
 
 
     }
+}
+
+function logoFinish() {
+
+    //    document.querySelector(".logo").offsetWidth;
+    //
+    //    document.querySelector(".capulus_container1").offsetWidth;
+    //
+    //    document.querySelector(".clava_container1").offsetWidth;
+    //
+    //    document.querySelector(".capulus_sprite1").offsetWidth;
+    //
+    //    document.querySelector(".clava_sprite1").offsetWidth;
+    //
+    //    document.querySelector(".capulus_container2").offsetWidth;
+    //
+    //    document.querySelector(".capulus_container2 p").offsetWidth;
+    //
+    //    document.querySelector(".clava_container2").offsetWidth;
+    //
+    //    document.querySelector(".clava_container2 p").offsetWidth;
+    //
+    //    document.querySelector(".clava_container2").offsetWidth;
+    //
+    //    document.querySelector(".clava_container2").offsetWidth;
 
 
-    /***************************
-    QUOTES
-    ***************************/
+    document.querySelector(".logo").classList.add("hide")
+    document.querySelector(".logo").addEventListener("animationend", popBack);
 
-    /***************************************************************************************************************************************
-    Sætter quotes til at være synlige i 9 sekunder og skifte hvert 10. sekund
-    ***************************************************************************************************************************************/
-
-    const quoteSpeed = 9000;
-
-    setInterval(visQuotes, quoteSpeed);
-
-
-    /***************************************************************************************************************************************
-    Funktionen der tjekker efter hvilken quote der skal printes. Vores random quote generator skriver både author og quote som hører sammen med et ID fra google sheet.
-    ***************************************************************************************************************************************/
-
-    function visQuotes() {
-        let antal = alleQuotes.length;
-        const ranTal = Math.floor(Math.random() * (antal - 1));
-        //console.log(ranTal)
-        alleQuotes.forEach((quote, i) => {
-            //        console.log(i)
-            if (i == ranTal) {
-                console.log(quote.gsx$quote.$t)
-                document.querySelector(".quote").textContent = quote.gsx$quote.$t;
-                document.querySelector(".author").textContent = "- " + quote.gsx$author.$t;
-                document.querySelector(".quote").classList.add("fade");
-                document.querySelector(".author").classList.add("fade");
-            }
-        })
-        setTimeout(fadeUd, 8000);
+    function popBack() {
+        document.querySelector(".logo").classList.remove("hide");
     }
 
-    function fadeUd() {
-        document.querySelector(".quote").classList.remove("fade");
-        document.querySelector(".author").classList.remove("fade");
-    }
+
+
+}
+
+
+/***************************
+QUOTES
+***************************/
+
+/***************************************************************************************************************************************
+Sætter quotes til at være synlige i 9 sekunder og skifte hvert 10. sekund
+***************************************************************************************************************************************/
+
+const quoteSpeed = 9000;
+
+setInterval(visQuotes, quoteSpeed);
+
+
+/***************************************************************************************************************************************
+Funktionen der tjekker efter hvilken quote der skal printes. Vores random quote generator skriver både author og quote som hører sammen med et ID fra google sheet.
+***************************************************************************************************************************************/
+
+function visQuotes() {
+    let antal = alleQuotes.length;
+    const ranTal = Math.floor(Math.random() * (antal - 1));
+    //console.log(ranTal)
+    alleQuotes.forEach((quote, i) => {
+        //        console.log(i)
+        if (i == ranTal) {
+            console.log(quote.gsx$quote.$t)
+            document.querySelector(".quote").textContent = quote.gsx$quote.$t;
+            document.querySelector(".author").textContent = "- " + quote.gsx$author.$t;
+            document.querySelector(".quote").classList.add("fade");
+            document.querySelector(".author").classList.add("fade");
+        }
+    })
+    setTimeout(fadeUd, 8000);
+}
+
+function fadeUd() {
+    document.querySelector(".quote").classList.remove("fade");
+    document.querySelector(".author").classList.remove("fade");
+}
