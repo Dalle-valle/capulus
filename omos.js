@@ -50,6 +50,8 @@ function menuFlow() {
 
 function start() {
     hentOs();
+    logoOmOs();
+
 }
 
 async function hentOs() {
@@ -71,10 +73,24 @@ function visOs() {
         klon.querySelector("img").src = `billeder/small/${person.gsx$billede.$t}.jpg`;
         klon.querySelector("h2").textContent = `${person.gsx$navn.$t}`;
         klon.querySelector("p").textContent += `${person.gsx$tekst.$t}`;
-//        klon.querySelector("article").addEventListener("click", () => visDetail(kaffe))
-     //        klon.querySelector("article").addEventListener("click", fjernClass);
+        //        klon.querySelector("article").addEventListener("click", () => visDetail(kaffe))
+        //        klon.querySelector("article").addEventListener("click", fjernClass);
 
         container.appendChild(klon);
 
     })
+}
+
+function logoOmOs() {
+    console.log("animation go home");
+    document.querySelector(".logo svg").style.fill = "#A68B6A";
+    document.querySelector(".logo circle").style.strokeDashoffset = "0";
+    document.querySelector(".name").style.transform = "scale(1)";
+    document.querySelector(".capulus_sprite1").style.transform = "translateX(232px)";
+    document.querySelector(".clava_sprite1").style.transform = "translateX(169px)";
+    document.querySelector(".capulus_container2").style.display = "none";
+    document.querySelector(".clava_container2").style.display = "none";
+    document.querySelector(".logo").style.top = "35px";
+    document.querySelector(".logo").style.transform = "scale(0.55)";
+    document.querySelector(".logo").style.position = "fixed";
 }
