@@ -53,8 +53,9 @@ footer {
 }
 
 .social_media img {
-    height: 5vw;
-    width: 5vw;
+    height: 9vw;
+    width: 9vw;
+    cursor: pointer;
 }
 
 /************************************
@@ -537,4 +538,10 @@ article img:hover {
     }
 
     footer {}
+
+    .social_media img {
+        height: 5vw;
+        width: 5vw;
+
+    }
 }
