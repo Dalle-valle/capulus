@@ -103,7 +103,7 @@ async function hentQuotes() {
     let quotesJson = await response.json();
     alleQuotes = quotesJson.feed.entry;
     console.log(alleQuotes.length);
-    setTimeout(QuotesDelay, 500);
+    setTimeout(QuotesDelay, 5700);
 }
 
 /***************************
@@ -298,6 +298,7 @@ Sætter quotes til at være synlige i 9 sekunder og skifte hvert 10. sekund
 ***************************************************************************************************************************************/
 
 function QuotesDelay() {
+    visQuotes();
     const quoteSpeed = 9000;
 
     setInterval(visQuotes, quoteSpeed);
