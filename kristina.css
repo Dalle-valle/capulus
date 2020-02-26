@@ -179,7 +179,7 @@ IMG HOVER
     z-index: 1;
 }
 
-article:hover .overlay {
+#index article:hover .overlay {
     animation-name: come_up_kf;
     animation-duration: 0.3s;
     animation-timing-function: linear;

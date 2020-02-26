@@ -18,7 +18,7 @@ function menuOpenClose() {
     console.log("menu pressed");
     this.classList.toggle("burger_kryds");
 
-    const bMenu = document.querySelector("#mylinks");
+    const bMenu = document.querySelector("#my_links");
     if (bMenu.style.display === "block") {
         bMenu.style.display = "none";
 
@@ -51,6 +51,7 @@ function menuFlow() {
 function start() {
     hentOs();
     logoOmOs();
+    document.querySelector("#my_links").style.opacity = "1";
 
 }
 

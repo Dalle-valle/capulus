@@ -66,17 +66,19 @@ header {
 }
 
 
-#mylinks {
+#my_links {
     display: none;
     background-color: rgba(166, 139, 106, 0.72);
     width: 40vw;
     height: 30vh;
     float: right;
     justify-content: space-around;
+    opacity: 0;
+    transition: 1s;
 }
 
 
-#mylinks a {
+#my_links a {
     text-transform: uppercase;
     font-family: muli, sans-serif;
     font-weight: 400;
@@ -477,7 +479,7 @@ h1 {
         background-size: 100%;
     }
 
-    #mylinks {
+    #my_links {
         display: flex;
         flex-direction: row;
         background-color: rgba(0, 0, 0, 0);
