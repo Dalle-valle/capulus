@@ -214,23 +214,28 @@ OM OS
 #omos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
-    grid-gap: 40px;
-    max-width: 1300px;
+    grid-gap: 10px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-top: 0px;
-    box-shadow: 0;
+}
 
+#omos article {
+    display: flex;
+    flex-direction: row;
+}
+
+#omos img {
+    width: 25%;
+}
+
+#omos article:nth-child(odd) {
+    flex-direction: row-reverse;
 }
 
 #omos h2 {
     font-size: 2rem;
-    /*    position: absolute;*/
     color: #333;
-    /*
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-*/
     z-index: 1;
     text-align: center;
     width: 400px;
