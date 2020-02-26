@@ -31,7 +31,7 @@ function menuOpenClose() {
     console.log("menu pressed");
     this.classList.toggle("burger_kryds");
 
-    const bMenu = document.querySelector("#mylinks");
+    const bMenu = document.querySelector("#my_links");
     if (bMenu.style.display === "block") {
         bMenu.style.display = "none";
 
@@ -60,9 +60,9 @@ document.querySelector(".menu_wrapper").addEventListener("animationend", menuFlo
 function menuFlow() {
 
 
-    document.querySelector("#menu1").classList.add("fade1");
-    document.querySelector("#menu2").classList.add("fade2");
-    document.querySelector("#menu3").classList.add("fade3");
+    document.querySelector("#menu1").classList.add("fade1_menu");
+    document.querySelector("#menu2").classList.add("fade2_menu");
+    document.querySelector("#menu3").classList.add("fade3_menu");
     document.querySelector(".quotes").classList.add("blur");
 }
 
@@ -74,6 +74,14 @@ function start() {
     hentKaffer(sheet1);
     hentQuotes(sheet2);
     logoAnimation();
+    setTimeout(menuDelay, 5400);
+}
+
+/**********************************************************************
+Menu på web får delay på xx sekunder før den fader ind
+**********************************************************************/
+function menuDelay() {
+    document.querySelector("#my_links").style.opacity = "1";
 }
 
 /***************************
@@ -103,7 +111,7 @@ async function hentQuotes() {
     let quotesJson = await response.json();
     alleQuotes = quotesJson.feed.entry;
     console.log(alleQuotes.length);
-    setTimeout(QuotesDelay, 500);
+    setTimeout(QuotesDelay, 5700);
 }
 
 /***************************
@@ -202,7 +210,7 @@ LOGO ANIMATION
 
 
 /***************************************************************************************************************************************
-KRISTINA UDFYLDE DE HER.
+KRISTINA UDFYLD DET HER, with make-up,
 ***************************************************************************************************************************************/
 
 function logoAnimation() {
@@ -255,6 +263,7 @@ function scrollFunction() {
     if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
         stopAnimation();
         animationGoHome();
+        menuDelay();
     }
 }
 
@@ -277,6 +286,7 @@ function stopAnimation() {
 
 function animationGoHome() {
     console.log("animation go home");
+    document.querySelector(".logo").classList.add("logo_opacity");
     document.querySelector(".logo svg").style.fill = "#A68B6A";
     document.querySelector(".logo circle").style.strokeDashoffset = "0";
     document.querySelector(".name").style.transform = "scale(1)";
@@ -298,6 +308,7 @@ Sætter quotes til at være synlige i 9 sekunder og skifte hvert 10. sekund
 ***************************************************************************************************************************************/
 
 function QuotesDelay() {
+    visQuotes();
     const quoteSpeed = 9000;
 
     setInterval(visQuotes, quoteSpeed);

@@ -8,7 +8,7 @@ LOGO
     left: 50%;
     transform: translate(-50%, -50%);
     transform: scale(0.6);
-    z-index: 1000;
+    z-index: 3;
     pointer-events: none;
 }
 
@@ -21,7 +21,7 @@ header svg {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2000;
+    z-index: 2;
 }
 
 .logo svg {
@@ -179,7 +179,7 @@ IMG HOVER
     z-index: 1;
 }
 
-article:hover .overlay {
+#index article:hover .overlay {
     animation-name: come_up_kf;
     animation-duration: 0.3s;
     animation-timing-function: linear;
@@ -192,8 +192,67 @@ POP-UP
 ***********************/
 
 #detail {
-    z-index: 2;
+    z-index: 4;
 }
+
+
+/***********************************
+OM OS
+***********************************/
+
+/*
+#omos_splash {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(billeder/om_mobile_splash.jpg);
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+*/
+
+
+#omos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
+    grid-gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 0px;
+    box-shadow: 0;
+
+}
+
+#omos h2 {
+    font-size: 2rem;
+    /*    position: absolute;*/
+    color: #333;
+    /*
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+*/
+    z-index: 1;
+    text-align: center;
+    width: 400px;
+    text-transform: capitalize;
+}
+
+.om_headline {
+    position: relative;
+    top: 10vh;
+    left: 35%;
+    color: white;
+    font-size: 6rem;
+}
+
+
+
+#omos h2,
+#omos h1 {
+    margin-top: 8vh;
+}
+
+
 
 /***********************
 ANIMATION CLASSES
@@ -278,6 +337,13 @@ ANIMATION CLASSES
 
 .fade {
     opacity: 1;
+}
+
+.logo_opacity {
+    animation: logo_opacity_kf;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 /***********************
@@ -380,6 +446,16 @@ ANIMATIONER
 @keyframes come_up_kf {
     100% {
         transform: translateY(1px);
+    }
+}
+
+@keyframes logo_opacity_kf {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 

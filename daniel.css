@@ -29,6 +29,9 @@ h2 {
     margin: 0;
 }
 
+/*************************
+FOOTER
+*************************/
 /************************************
 BURGER MENU MOBILE ONLY
 ************************************/
@@ -37,7 +40,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 2;
 }
 
 
@@ -66,17 +69,19 @@ header {
 }
 
 
-#mylinks {
+#my_links {
     display: none;
     background-color: rgba(166, 139, 106, 0.72);
     width: 40vw;
     height: 30vh;
     float: right;
     justify-content: space-around;
+    opacity: 0;
+    transition: 1s;
 }
 
 
-#mylinks a {
+#my_links a {
     text-transform: uppercase;
     font-family: muli, sans-serif;
     font-weight: 400;
@@ -110,6 +115,7 @@ header {
     text-align: center;
     top: 35vw;
     left: -20vw;
+    opacity: 0;
 }
 
 
@@ -177,7 +183,7 @@ SPLASH
 
 /*########### Section - Template ############*/
 
-article {
+#index article {
     /*    border: 1px solid #000;*/
     height: auto;
     padding: 8px;
@@ -253,53 +259,6 @@ article img:hover {
     display: none;
 }
 
-/***********************************
-OM OS
-***********************************/
-
-#omos_splash {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(billeder/om_mobile_splash.jpg);
-    background-size: 120%;
-    background-repeat: no-repeat;
-}
-
-
-#omos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 40px;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding-top: 0px;
-
-}
-
-#omos h2 {
-    font-size: 2rem;
-    /*    position: absolute;*/
-    color: #333;
-    /*
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-*/
-    z-index: 1;
-    text-align: center;
-    width: 400px;
-    text-transform: capitalize;
-}
-
-
-
-
-#omos h2,
-h1 {
-    margin-top: 8vh;
-}
-
-
 /*########### ANIMATIONER ############*/
 
 .paused {
@@ -313,34 +272,22 @@ h1 {
     animation-timing-function: ease-in;
 }
 
-.fadeout {
-    animation-name: fade;
-    animation-duration: 0.7s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-}
-
-.fade1 {
-    animation-name: fade1;
+.fade1_menu,
+.fade2_menu,
+.fade3_menu {
+    opacity: 0;
+    animation-name: fade_menu;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     animation-delay: 0.4s;
 }
 
-.fade2 {
-    animation-name: fade2;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
+.fade2_menu {
     animation-delay: 0.6s;
 }
 
-.fade3 {
-    animation-name: fade3;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
+.fade3_menu {
     animation-delay: 0.8s;
 }
 
@@ -416,7 +363,7 @@ h1 {
     }
 }
 
-@keyframes fade1 {
+@keyframes fade_menu {
     0% {
         opacity: 0
     }
@@ -427,38 +374,6 @@ h1 {
     }
 }
 
-@keyframes fade2 {
-    0% {
-        opacity: 0
-    }
-
-
-    100% {
-        opacity: 1
-    }
-}
-
-@keyframes fade3 {
-    0% {
-        opacity: 0
-    }
-
-
-    100% {
-        opacity: 1
-    }
-}
-
-@keyframes fadeout {
-    0% {
-        transform: translateX(0%);
-    }
-
-
-    100 {
-        transform: translateX(100%);
-    }
-}
 
 .hide {
     opacity: 0;
@@ -477,7 +392,7 @@ h1 {
         background-size: 100%;
     }
 
-    #mylinks {
+    #my_links {
         display: flex;
         flex-direction: row;
         background-color: rgba(0, 0, 0, 0);
@@ -591,7 +506,7 @@ h1 {
         max-height: 100vh;
     }
 
-    article {
+    #index article {
         box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
     }
 }
