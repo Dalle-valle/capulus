@@ -41,9 +41,9 @@ document.querySelector(".menu_wrapper").addEventListener("animationend", menuFlo
 function menuFlow() {
 
 
-    document.querySelector("#menu1").classList.add("fade1");
-    document.querySelector("#menu2").classList.add("fade2");
-    document.querySelector("#menu3").classList.add("fade3");
+    document.querySelector("#menu1").classList.add("fade1_menu");
+    document.querySelector("#menu2").classList.add("fade2_menu");
+    document.querySelector("#menu3").classList.add("fade3_menu");
 
 }
 
