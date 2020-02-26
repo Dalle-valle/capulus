@@ -73,6 +73,8 @@ header {
     height: 30vh;
     float: right;
     justify-content: space-around;
+    opacity: 0;
+    transition: 1s;
 }
 
 

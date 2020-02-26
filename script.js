@@ -31,7 +31,7 @@ function menuOpenClose() {
     console.log("menu pressed");
     this.classList.toggle("burger_kryds");
 
-    const bMenu = document.querySelector("#mylinks");
+    const bMenu = document.querySelector("#my_links");
     if (bMenu.style.display === "block") {
         bMenu.style.display = "none";
 
@@ -74,6 +74,14 @@ function start() {
     hentKaffer(sheet1);
     hentQuotes(sheet2);
     logoAnimation();
+    setTimeout(menuDelay, 5400);
+}
+
+/**********************************************************************
+Menu på web får delay på xx sekunder før den fader ind
+**********************************************************************/
+function menuDelay() {
+    document.querySelector("#my_links").style.opacity = "1";
 }
 
 /***************************
