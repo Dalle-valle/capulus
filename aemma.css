@@ -1,0 +1,66 @@
+/**EMMAS SYGE CSS**/
+
+.sygt {
+    background-color: aquamarine;
+}
+
+
+
+#detail {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: scroll;
+}
+
+
+
+#detail .kaf {
+    margin: 4rem auto;
+    padding: 4rem;
+    height: 80vh;
+    width: 65vw;
+    background-color: #ede3d8;
+
+}
+
+#detail button {
+    margin: .5em;
+    position: relative;
+    top: 130px;
+    left: 750px;
+    background-color: white;
+    height: 100;
+    width: 30px;
+    border-radius: 20px
+        /*    background-color: rgba(240, 248, 255, 0);*/
+}
+
+
+.skjul {
+    display: none;
+}
+
+#detail h1 {
+    text-align: left;
+    position: relative;
+    top: 250px;
+    left: 390px;
+    text-transform: capitalize;
+}
+
+#detail p {
+    text-align: left;
+    position: relative;
+    top: -270px;
+    left: 390px;
+    max-width: 45ch;
+}
+
+#detail img {
+    width: 45%;
+    height: 100%;
+    margin-top: 10px;
+}
