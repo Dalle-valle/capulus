@@ -52,7 +52,6 @@ function start() {
     hentOs();
     logoOmOs();
     document.querySelector("#my_links").style.opacity = "1";
-
 }
 
 async function hentOs() {
