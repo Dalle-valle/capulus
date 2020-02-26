@@ -214,8 +214,8 @@ OM OS
 #omos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
-    grid-gap: 40px;
-    max-width: 1300px;
+    grid-gap: 10px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-top: 0px;
 }
@@ -223,6 +223,14 @@ OM OS
 #omos article {
     display: flex;
     flex-direction: row;
+}
+
+#omos img {
+    width: 25%;
+}
+
+#omos article:nth-child(odd) {
+    flex-direction: row-reverse;
 }
 
 #omos h2 {
