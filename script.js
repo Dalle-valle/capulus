@@ -263,6 +263,7 @@ function scrollFunction() {
     if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
         stopAnimation();
         animationGoHome();
+        menuDelay();
     }
 }
 
@@ -285,6 +286,7 @@ function stopAnimation() {
 
 function animationGoHome() {
     console.log("animation go home");
+    document.querySelector(".logo").classList.add("logo_opacity");
     document.querySelector(".logo svg").style.fill = "#A68B6A";
     document.querySelector(".logo circle").style.strokeDashoffset = "0";
     document.querySelector(".name").style.transform = "scale(1)";
