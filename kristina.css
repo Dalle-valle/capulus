@@ -8,7 +8,7 @@ LOGO
     left: 50%;
     transform: translate(-50%, -50%);
     transform: scale(0.6);
-    z-index: 1000;
+    z-index: 3;
     pointer-events: none;
 }
 
@@ -21,7 +21,7 @@ header svg {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2000;
+    z-index: 2;
 }
 
 .logo svg {
@@ -192,7 +192,7 @@ POP-UP
 ***********************/
 
 #detail {
-    z-index: 2;
+    z-index: 4;
 }
 
 /***********************
