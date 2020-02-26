@@ -218,19 +218,16 @@ OM OS
     max-width: 1300px;
     margin: 0 auto;
     padding-top: 0px;
-    box-shadow: 0;
+}
 
+#omos article {
+    display: flex;
+    flex-direction: row;
 }
 
 #omos h2 {
     font-size: 2rem;
-    /*    position: absolute;*/
     color: #333;
-    /*
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-*/
     z-index: 1;
     text-align: center;
     width: 400px;
