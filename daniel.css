@@ -293,6 +293,17 @@ OM OS
     text-transform: capitalize;
 }
 
+.om_headline {
+    position: relative;
+    top: 10vh;
+    left: 35%;
+    color: white;
+    font-size: 6rem;
+
+
+
+
+}
 
 
 
