@@ -198,7 +198,7 @@ function visDetail(kaffe) {
 
     detail.querySelector("p + p").textContent = kaffe.gsx$oprindelse.$t;
 
-    detail.querySelector("p + p").textContent += kaffe.gsx$oprindelse.$t;
+//    detail.querySelector("p + p").textContent += kaffe.gsx$oprindelse.$t;
 
     detail.querySelector("img").addEventListener("click", () => detail.classList.add("skjul"));
     document.querySelector("#detail").addEventListener("click", () => detail.classList.add("skjul"));
