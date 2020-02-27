@@ -143,6 +143,7 @@ SORTERINGS MENU
     width: 100px;
     background-color: #ede3d8;
     border: none;
+    outline: none;
 }
 
 .sorter.active {

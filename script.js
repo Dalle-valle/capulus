@@ -75,6 +75,7 @@ function start() {
     hentQuotes(sheet2);
     logoAnimation();
     setTimeout(menuDelay, 5400);
+    klikListeners();
 }
 
 /**********************************************************************
@@ -154,6 +155,7 @@ Funktionen der tilføjer eventlisteners på alle filterknapper som er der for at
 function klikListeners() {
     document.querySelectorAll(".filter").forEach(elm => {
         elm.addEventListener("click", filtrering);
+        console.log("elm");
 
     })
 
@@ -166,14 +168,14 @@ Funktionen der filtrerer vores kategorier når der klikkes på de forskellige fi
 
 function filtrering() {
     console.log("FILTER");
-    filter = this.dataset.kategorier;
+    filter = this.dataset.kategori;
     visKaffer();
     document.querySelector("h2").textContent = this.textContent;
     document.querySelectorAll(".filter").forEach(elm => {
-        elm.classList.remove("valgt");
+        elm.classList.remove("active");
 
     })
-    this.classList.add("valgt");
+    this.classList.add("active");
 
 };
 
@@ -198,7 +200,7 @@ function visDetail(kaffe) {
 
     detail.querySelector("p + p").textContent = kaffe.gsx$oprindelse.$t;
 
-//    detail.querySelector("p + p").textContent += kaffe.gsx$oprindelse.$t;
+    //    detail.querySelector("p + p").textContent += kaffe.gsx$oprindelse.$t;
 
     detail.querySelector("img").addEventListener("click", () => detail.classList.add("skjul"));
     document.querySelector("#detail").addEventListener("click", () => detail.classList.add("skjul"));
