@@ -626,7 +626,7 @@ article img:hover {
     }
 
     .quotes h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         max-width: 40ch;
     }
 
@@ -740,6 +740,11 @@ article img:hover {
 
     .quotes {
         top: 25vh;
+    }
+
+    .quotes h2 {
+        font-size: 2.5rem;
+        max-width: 40ch;
     }
 
     #detail p:nth-child(1) {
