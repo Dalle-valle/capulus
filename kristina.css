@@ -111,6 +111,9 @@ DETAIL BUTTON
 
 details {
     color: #A68B6A;
+    width: 100vw;
+    max-width: 1300px;
+    padding: 0.5vw 0;
 
 }
 
@@ -123,10 +126,7 @@ summary {
     text-transform: uppercase;
     text-align: end;
     outline: none;
-    width: 100vw;
-    max-width: 1300px;
 }
-
 
 
 /***********************
@@ -135,9 +135,7 @@ SORTERINGS MENU
 
 .sorter_menu {
     text-align: end;
-    width: 100vw;
-    max-width: 1300px;
-    padding-bottom: 2vw;
+    padding-bottom: 1vw;
 }
 
 .sorter_menu button {
@@ -148,7 +146,6 @@ SORTERINGS MENU
     background-color: #ede3d8;
     border: none;
     outline: none;
-
 }
 
 .sorter.active {
