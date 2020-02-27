@@ -483,7 +483,7 @@ ANIMATIONER
 @media only screen and (min-width: 1024px) {
     .logo {
         top: 20%;
-        transform: scale(0.5);
+        transform: scale(1);
     }
 
     #omos_intro {
