@@ -213,39 +213,39 @@ OM OS
 
 #omos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
     grid-gap: 10px;
-    max-width: 1000px;
     margin: 0 auto;
     padding-top: 0px;
 }
 
 #omos article {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #omos img {
-    width: 25%;
+    flex-grow: 1;
+    flex-basis: 100px;
 }
 
-#omos article:nth-child(odd) {
-    flex-direction: row-reverse;
+
+#omos p {
+    flex-grow: 2;
+    flex-basis: 300px;
 }
 
-#omos h2 {
+
+
+#omos article h2 {
     font-size: 2rem;
     color: #333;
-    z-index: 1;
-    text-align: center;
-    width: 400px;
     text-transform: capitalize;
+    padding: 10px 0;
 }
 
 .om_headline {
-    position: relative;
-    top: 10vh;
-    left: 35%;
     color: white;
     font-size: 6rem;
 }
@@ -471,9 +471,32 @@ ANIMATIONER
     }
 }
 
+/******************************************************
+WEB
+******************************************************/
 @media only screen and (min-width: 1024px) {
     .logo {
         transform: scale(1.5);
         top: 35%;
+    }
+
+    #omos {
+        max-width: 1000px;
+    }
+
+    #omos article {
+        flex-direction: row;
+    }
+
+    #omos article:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    #omos img {
+        width: 25%;
+    }
+
+    #omos article h2 {
+        width: 100vw;
     }
 }
