@@ -118,12 +118,11 @@ summary {
     font-family: muli, sans-serif;
     font-weight: 400;
     font-style: normal;
-    padding: 3vw 0;
+    padding: 1vw 5vw;
     font-size: 1.2rem;
     text-transform: uppercase;
     text-align: end;
     outline: none;
-    max-width: 1300px;
 }
 
 
@@ -145,6 +144,7 @@ SORTERINGS MENU
     background-color: #ede3d8;
     border: none;
     outline: none;
+    max-width: 1300px;
 }
 
 .sorter.active {
