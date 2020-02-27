@@ -257,13 +257,12 @@ SPLASH
 #index h2 {
     font-size: 1.5rem;
     position: absolute;
-    color: #ffffff;
     top: 10%;
     left: 50%;
+    color: #ffffff;
     transform: translateX(-50%);
     z-index: 1;
     text-align: center;
-    width: 400px;
     text-transform: capitalize;
 }
 
