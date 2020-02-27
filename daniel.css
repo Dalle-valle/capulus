@@ -321,6 +321,11 @@ article img:hover {
 
 #detail h1 {
     text-transform: capitalize;
+    font-size: 3rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
 
 }
 
@@ -383,6 +388,8 @@ article img:hover {
 .skjul {
     display: none;
 }
+
+
 
 /*emma pop op slut*/
 
@@ -801,6 +808,8 @@ article img:hover {
     .skjul {
         display: none;
     }
+
+
 
     /*pop op slut*/
 }

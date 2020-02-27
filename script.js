@@ -134,6 +134,7 @@ function visKaffer() {
         if (filter == "alle" || filter == kaffe.gsx$kategori.$t) {
             let klon = kafferTemplate.cloneNode(true).content;
             klon.querySelector("img").src = `billeder/small/${kaffe.gsx$billede.$t}-sm.jpg`;
+            klon.querySelector("img").alt = kaffe.gsx$billede.$t;
             klon.querySelector("h2").textContent = `${kaffe.gsx$navn.$t}`;
             klon.querySelector("p").textContent += `${kaffe.gsx$kort.$t}`;
             klon.querySelector("article").addEventListener("click", () => visDetail(kaffe))
