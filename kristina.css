@@ -135,7 +135,9 @@ SORTERINGS MENU
 
 .sorter_menu {
     text-align: end;
-    padding: 0 5vw 2vw;
+    width: 100vw;
+    max-width: 1300px;
+    padding-bottom: 2vw;
 }
 
 .sorter_menu button {
@@ -146,7 +148,7 @@ SORTERINGS MENU
     background-color: #ede3d8;
     border: none;
     outline: none;
-    max-width: 1300px;
+
 }
 
 .sorter.active {
