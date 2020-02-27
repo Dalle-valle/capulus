@@ -237,20 +237,20 @@ OM OS
 
 #omos article {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    padding-bottom: 5vh;
+    padding-bottom: 10vh;
 }
 
 #omos img {
     flex-grow: 1;
-    flex-basis: 100px;
+    flex-basis: 200px;
 }
 
 
 #omos p {
     flex-grow: 2;
-    flex-basis: 300px;
+    flex-basis: 500px;
     margin: 0 2vw;
 }
 
@@ -261,7 +261,7 @@ OM OS
     color: #333;
     text-transform: capitalize;
     padding: 10px 0;
-    margin: 0;
+    margin: 0 2vw;
 }
 
 
@@ -480,17 +480,40 @@ ANIMATIONER
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     .logo {
         top: 20%;
-        transform: scale(0.5);
+        transform: scale(1);
+    }
+
+    #omos_intro {
+        padding: 0 10vh;
+        padding-top: 10vh;
+        padding-bottom: 1vh;
+    }
+
+    #omos img {
+        width: 30%;
+        box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #omos article h2 {
+        width: 100vw;
+    }
+
+    #omos article:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    #omos article {
+        padding: 5vw;
     }
 }
 
 /******************************************************
 WEB
 ******************************************************/
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1080px) {
     .logo {
         transform: scale(1.5);
         top: 35%;
@@ -502,25 +525,17 @@ WEB
         padding-bottom: 1vh;
     }
 
+
     #omos {
         max-width: 1000px;
     }
 
     #omos article {
-        flex-direction: row;
-
+        padding: 2vw;
     }
 
-    #omos article:nth-child(even) {
-        flex-direction: row-reverse;
-    }
 
     #omos img {
         width: 25%;
-        box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    #omos article h2 {
-        width: 100vw;
     }
 }
