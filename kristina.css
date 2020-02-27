@@ -211,7 +211,11 @@ OM OS
     background-repeat: no-repeat;
 }
 */
-
+#omos_intro {
+    background-color: white;
+    margin: 0;
+    padding: 5vh;
+}
 
 #omos {
     display: grid;
@@ -219,6 +223,10 @@ OM OS
     grid-gap: 10px;
     margin: 0 auto;
     padding-top: 0px;
+}
+
+#omos_intro h1 {
+    margin: 0;
 }
 
 #omos article {
@@ -230,12 +238,14 @@ OM OS
 #omos img {
     flex-grow: 1;
     flex-basis: 100px;
+    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 
 #omos p {
     flex-grow: 2;
     flex-basis: 300px;
+    margin: 0 2vw;
 }
 
 
@@ -247,10 +257,12 @@ OM OS
     padding: 10px 0;
 }
 
+/*
 .om_headline {
     color: white;
-    font-size: 6rem;
+    font-size: 3rem;
 }
+*/
 
 
 

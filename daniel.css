@@ -46,7 +46,7 @@ footer {
 }
 
 
-#footer_bg {
+.footer_bg {
     border-bottom: 175px solid white;
     border-left: 100vw solid transparent;
     overflow: hidden;
@@ -439,8 +439,10 @@ article img:hover {
     }
 
     #omos_splash {
-        background-image: url(billeder/om_desktop_splash.jpg);
+        background-image: url(billeder/omos_splash.jpg);
         background-size: 100%;
+        height: 67vh;
+        background-position: center;
     }
 
     #my_links {
