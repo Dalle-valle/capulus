@@ -118,11 +118,13 @@ summary {
     font-family: muli, sans-serif;
     font-weight: 400;
     font-style: normal;
-    padding: 1vw 5vw;
+    padding: 1vw 0;
     font-size: 1.2rem;
     text-transform: uppercase;
     text-align: end;
     outline: none;
+    width: 100vw;
+    max-width: 1300px;
 }
 
 
