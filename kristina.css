@@ -212,9 +212,11 @@ OM OS
 }
 */
 #omos_intro {
-    background-color: white;
     margin: 0;
-    padding: 5vh;
+    padding: 0 1vh;
+    background-color: white;
+    padding-top: 10vh;
+    padding-bottom: 1vh;
 }
 
 #omos {
@@ -227,18 +229,19 @@ OM OS
 
 #omos_intro h1 {
     margin: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #omos article {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-bottom: 5vh;
 }
 
 #omos img {
     flex-grow: 1;
     flex-basis: 100px;
-    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -255,15 +258,8 @@ OM OS
     color: #333;
     text-transform: capitalize;
     padding: 10px 0;
+    margin: 0;
 }
-
-/*
-.om_headline {
-    color: white;
-    font-size: 3rem;
-}
-*/
-
 
 
 #omos h2,
@@ -272,6 +268,9 @@ OM OS
 }
 
 
+.om_bg {
+    transform: scale(-1);
+}
 
 /***********************
 ANIMATION CLASSES
@@ -494,12 +493,19 @@ WEB
         top: 35%;
     }
 
+    #omos_intro {
+        padding: 0 30vh;
+        padding-top: 10vh;
+        padding-bottom: 1vh;
+    }
+
     #omos {
         max-width: 1000px;
     }
 
     #omos article {
         flex-direction: row;
+
     }
 
     #omos article:nth-child(even) {
@@ -508,6 +514,7 @@ WEB
 
     #omos img {
         width: 25%;
+        box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
     }
 
     #omos article h2 {
