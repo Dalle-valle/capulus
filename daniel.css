@@ -37,25 +37,47 @@ FOOTER
 
 footer {
     background-color: white;
-    padding: 10vh;
+    padding: 0 5vh;
     width: 100%;
-
-
-
+    height: 35vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 
-#footer_bg {
+.footer_bg {
     border-bottom: 175px solid white;
     border-left: 100vw solid transparent;
     overflow: hidden;
 
 }
 
+
+footer h3 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-bottom: 3px;
+}
+
 .social_media img {
     height: 9vw;
     width: 9vw;
     cursor: pointer;
+    text-align: end;
+}
+
+.kontakt {
+    flex-grow: 2;
+    flex-basis: 200px;
+}
+
+.kontakt p {
+    margin: 0;
+}
+
+.social_media {
+    flex-grow: 1;
+    flex-basis: 200px;
 }
 
 /************************************
@@ -233,7 +255,7 @@ SPLASH
 }
 
 #index h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: absolute;
     color: #ffffff;
     top: 10%;
@@ -486,16 +508,21 @@ article img:hover {
 
 /*########### MEDIAQUERY ############*/
 
+
 @media only screen and (min-width: 1024px) {
     #splash {
         background-image: url(billeder/splash_desktop_placeholder.png);
         background-size: 100%;
     }
 
+    /*
     #omos_splash {
-        background-image: url(billeder/om_desktop_splash.jpg);
+        background-image: url(billeder/omos_splash.jpg);
         background-size: 100%;
+        height: 40vh;
+        background-position: center;
     }
+*/
 
     #my_links {
         display: flex;
@@ -684,11 +711,17 @@ article img:hover {
         box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
     }
 
-    footer {}
+    footer {
+        padding: 0 6vw;
+        height: 30vh;
+    }
 
     .social_media img {
         height: 5vw;
         width: 5vw;
+    }
 
+    footer h3 {
+        margin-top: 6vh;
     }
 }
