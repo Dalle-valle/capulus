@@ -11,6 +11,7 @@ body {
     background-color: #ede3d8;
 }
 
+
 img {
     width: 100%;
     object-fit: cover;
@@ -507,7 +508,11 @@ article img:hover {
 }
 
 /*########### MEDIAQUERY ############*/
-
+@media only screen and (min-width: 768px) {
+    #detail button {
+        left: 84vw
+    }
+}
 
 @media only screen and (min-width: 1024px) {
     #splash {
@@ -655,7 +660,7 @@ article img:hover {
 
     #detail img {
         width: 100%;
-        height: 75%;
+        height: 80%;
         flex-grow: 1;
         flex-basis: 500px;
         padding-top: 2.5rem;
@@ -687,11 +692,12 @@ article img:hover {
     #detail button {
         margin: .5em;
         position: absolute;
-        right: -200px;
+        /*        right: -200px;*/
         background-color: white;
         height: 30px;
         width: 30px;
         border-radius: 20px;
+
     }
 
     .skjul {
@@ -724,4 +730,69 @@ article img:hover {
     footer h3 {
         margin-top: 6vh;
     }
+}
+
+
+
+
+@media only screen and (min-width: 1280px) {
+
+    /*pop op start */
+
+    #detail p:nth-child(1) {
+        align-self: flex-end;
+        flex-grow: 1;
+        max-width: 60ch;
+
+    }
+
+    #detail .land {
+        text-align: end;
+        line-height: 1.6;
+
+    }
+
+    #detail img {
+        width: 40%;
+        height: 100%;
+        flex-grow: 1;
+        flex-basis: 500px;
+        padding-right: 15px;
+
+    }
+
+
+    #detail {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        overflow: scroll;
+    }
+
+    #detail .kaf {
+        flex-direction: row;
+        margin: 4rem auto;
+        padding: 2rem;
+        height: 75vh;
+        width: 85vw;
+        background-color: #ede3d8;
+
+    }
+
+    #detail button {
+        margin: .5em;
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border-radius: 20px;
+
+    }
+
+    .skjul {
+        display: none;
+    }
+
+    /*pop op slut*/
 }
