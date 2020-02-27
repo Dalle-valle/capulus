@@ -8,7 +8,7 @@ GENERELT
 
 body {
     margin: 0;
-    background-color: rgba(166, 139, 106, 0.35);
+    background-color: #ede3d8;
 }
 
 img {
@@ -29,9 +29,35 @@ h2 {
     margin: 0;
 }
 
+
+
 /*************************
 FOOTER
 *************************/
+
+footer {
+    background-color: white;
+    padding: 10vh;
+    width: 100%;
+
+
+
+}
+
+
+#footer_bg {
+    border-bottom: 175px solid white;
+    border-left: 100vw solid transparent;
+    overflow: hidden;
+
+}
+
+.social_media img {
+    height: 9vw;
+    width: 9vw;
+    cursor: pointer;
+}
+
 /************************************
 BURGER MENU MOBILE ONLY
 ************************************/
@@ -54,6 +80,7 @@ header {
     display: flex;
     font-style: normal;
     color: #A68B6A;
+
 }
 
 
@@ -103,7 +130,7 @@ header {
 
 
 #menu_burger_bar a {
-    color: #F4D4A7;
+    color: white;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
@@ -509,5 +536,13 @@ article img:hover {
 
     #index article {
         box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {}
+
+    .social_media img {
+        height: 5vw;
+        width: 5vw;
+
     }
 }
